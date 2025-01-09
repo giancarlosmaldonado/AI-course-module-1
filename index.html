@@ -117,15 +117,39 @@
             color: white;
             padding: 50px 20px;
         }
-        .about-section img {
-            max-width: 40%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        .signup-section {
+            background-image: url('signup-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
         }
-        .services .card img {
-            width: 64px;
-            height: 64px;
+        .signup-section form {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            text-align: left;
+            max-width: 400px;
+            width: 100%;
+        }
+        .signup-section label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .signup-section input, .signup-section select {
+            width: 100%;
+            padding: 8px;
             margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .signup-section .cta-button {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 10px 20px;
         }
         .footer {
             background: #003366;
@@ -178,7 +202,7 @@
         <h2>About Us</h2>
         <p>With over 15 years of expertise, we’ve empowered 500+ businesses to innovate with AI.</p>
         <div>
-            <img src="aboutus.jpg" alt="Our Team Working with AI">
+            <img src="about-us-background.jpg" alt="Our Team Working with AI">
             <p>We specialize in designing customized solutions to streamline operations, enhance productivity, and secure digital assets for our clients.</p>
         </div>
     </section>
@@ -207,10 +231,21 @@
             </div>
         </div>
     </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>Phone: +123-456-7890</p>
+    <section id="signup" class="signup-section">
+        <h2>Join Our Community</h2>
+        <p>Sign up today to unlock exclusive AI resources and updates.</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="interest">I'm Interested In:</label>
+            <select id="interest" name="interest">
+                <option value="ai-training">AI Training</option>
+                <option value="services">Services</option>
+            </select>
+            <button type="submit" class="cta-button">Sign Up</button>
+        </form>
     </section>
     <footer class="footer">
         <div class="social-icons">
