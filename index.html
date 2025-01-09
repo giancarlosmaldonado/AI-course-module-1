@@ -28,8 +28,18 @@
             justify-content: space-between;
             padding: 10px 20px;
         }
+        .logo {
+            display: flex;
+            align-items: center;
+        }
         .logo img {
-            height: 50px;
+            height: 60px; /* Increased size */
+            margin-right: 10px;
+        }
+        .logo span {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
         }
         nav {
             display: flex;
@@ -99,10 +109,13 @@
         }
         .hero-section video {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 50%; /* Adjust for watermark issues */
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 100%;
-            height: 100%;
+            height: auto;
+            min-width: 100%;
+            min-height: 100%;
             object-fit: cover;
             z-index: -1;
         }
@@ -131,7 +144,8 @@
             background-color: #f1f1f1;
         }
         #about img {
-            width: 40%;
+            flex: 1;
+            width: 45%;
             border-radius: 10px;
         }
         #about .about-text {
@@ -147,22 +161,22 @@
         }
 
         /* Services Section */
-        #services {
+        #services, #products {
             padding: 50px 20px;
             background-color: #ffffff;
             text-align: center;
         }
-        #services h2 {
+        #services h2, #products h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-        .services-container {
+        .services-container, .products-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
         }
-        .service-card {
+        .service-card, .product-card {
             background: white;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
@@ -170,7 +184,7 @@
             text-align: center;
             width: 250px;
         }
-        .service-card img {
+        .service-card img, .product-card img {
             width: 64px;
             margin-bottom: 15px;
         }
@@ -195,7 +209,8 @@
 <body>
     <header>
         <div class="logo">
-            <a href="/"><img src="logo.jpg" alt="IT Puerto Rico Logo"></a>
+            <img src="logo.jpg" alt="IT Puerto Rico Logo">
+            <span>IT Puerto Rico</span>
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu">
@@ -231,29 +246,32 @@
         <img src="aboutus.jpg" alt="About Us">
         <div class="about-text">
             <h2>About Us</h2>
-            <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we are proud to serve businesses across Puerto Rico with comprehensive IT services designed to meet the unique needs of our community.</p>
-            <p>Our roots run deep in the world of technology—our family has been pioneers in the IT field on the island, dedicated to advancing innovation and crafting solutions that empower local businesses.</p>
-            <p>At IT Puerto Rico, we specialize in a wide range of IT services, including network setup and management, cybersecurity solutions, cloud computing, and custom software development. We also provide IT consulting and on-demand remote support to ensure your business operates smoothly and securely.</p>
-            <p>As a proud local business, we are dedicated to supporting the growth and success of our clients, big or small. When you choose IT Puerto Rico, you’re choosing a partner that understands your needs and shares your goals.</p>
+            <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions...</p>
         </div>
     </section>
     <section id="services">
         <h2>Our Services</h2>
         <div class="services-container">
             <div class="service-card">
-                <img src="Brain_Icon.png" alt="Brain Icon">
-                <h3>Machine Learning</h3>
-                <p>Explore AI's possibilities with expert tools and insights.</p>
+                <h3>Network Setup & Management</h3>
+                <p>Designing, implementing, and managing secure and reliable networks.</p>
             </div>
             <div class="service-card">
-                <img src="Data_Icon.png" alt="Data Icon">
-                <h3>Data Analysis</h3>
-                <p>Transform raw data into actionable strategies.</p>
+                <h3>Cybersecurity Solutions</h3>
+                <p>Protection, threat monitoring, vulnerability assessments.</p>
             </div>
-            <div class="service-card">
-                <img src="Cluster_Icon.png" alt="Cluster Icon">
-                <h3>Clustering</h3>
-                <p>Discover hidden patterns with advanced clustering algorithms.</p>
+        </div>
+    </section>
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products-container">
+            <div class="product-card">
+                <h3>Antivirus Solutions</h3>
+                <p>TrendMicro, Webroot, etc.</p>
+            </div>
+            <div class="product-card">
+                <h3>Custom-Built Computers</h3>
+                <p>High-performance tailored PCs.</p>
             </div>
         </div>
     </section>
