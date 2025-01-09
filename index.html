@@ -12,194 +12,102 @@
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
+            padding-top: 80px; /* Adjust for sticky header */
         }
         header {
-            background: linear-gradient(90deg, #0057a4, #0078d7);
-            color: white;
-            padding: 20px;
-            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
         }
-        header img {
-            width: 150px;
+        .logo img {
+            height: 50px;
+            margin-right: 20px;
         }
         nav {
             display: flex;
-            justify-content: center;
-            background: #003366;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            align-items: center;
         }
         nav a {
-            color: white;
-            margin: 0 15px;
+            color: #333;
             text-decoration: none;
+            padding: 10px 15px;
             font-weight: bold;
-            transition: color 0.3s;
+            transition: color 0.3s, border-bottom 0.3s;
         }
         nav a:hover {
-            color: #ffcc00;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
         }
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            background-image: url('backgroundimage.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
+        nav a.active {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
         }
-        .hero-section h1 {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin: 0;
-        }
-        .hero-section p {
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-        .cta-button {
-            margin-top: 20px;
-            padding: 15px 30px;
+        .cta {
             background-color: #007bff;
             color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
             text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
         }
-        .cta-button:hover {
+        .cta:hover {
             background-color: #0056b3;
         }
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-        }
-        .services, .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .card {
-            background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            position: relative;
-        }
-        .card:hover {
-            transform: scale(1.05);
-        }
-        .card img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .card h3 {
-            margin-top: 10px;
-        }
-        .card p {
-            font-size: 0.9em;
-            color: #666;
-        }
-        .about-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-            text-align: left;
-        }
-        .about-section img {
-            max-width: 40%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .download-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-        }
-        .download-buttons img {
-            width: 120px;
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
             cursor: pointer;
-            transition: transform 0.3s ease-in-out;
+            background: none;
+            border: none;
         }
-        .download-buttons img:hover {
-            transform: scale(1.1);
-        }
-        .download-buttons p {
-            margin: 0;
-            text-align: center;
-            font-weight: bold;
-        }
-        footer {
-            background: #003366;
-            color: white;
-            text-align: center;
-            padding: 15px 20px;
-            margin-top: 50px;
-        }
-        .ai-training {
-            background: #f5f5f5;
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .ai-training h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .ai-training p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-        .ai-training a {
-            padding: 10px 20px;
-            color: white;
-            background: #0057a4;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .ai-training a:hover {
-            background: #0078d7;
-        }
-        .service-heading {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            justify-content: center;
-        }
-        .service-heading img {
-            width: 64px;
-            height: 64px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .service-heading img:hover {
-            transform: scale(1.1);
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #ffffff;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                width: 200px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.jpg" alt="IT Puerto Rico Logo">
-        <h1>IT Puerto Rico</h1>
-        <p>Your Trusted Partner in Technology Solutions</p>
+        <div class="logo">
+            <img src="logo.jpg" alt="IT Puerto Rico Logo">
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
+            <a href="#about" class="active">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#support">Support</a>
+            <a href="#ai-training">AI Training</a>
+            <a href="#contact">Contact</a>
+            <a href="#signup" class="cta">Get Started</a>
+        </nav>
     </header>
-    <nav>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#products">Products</a>
-        <a href="#support">Support</a>
-        <a href="#ai-training">AI Training</a>
-        <a href="#contact">Contact</a>
-    </nav>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
     <div class="hero-section">
         <div class="hero-content">
             <h1>Unlock the Power of Artificial Intelligence</h1>
@@ -293,16 +201,4 @@
     </section>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> 787.400.0644</p>
-        <p><strong>Email:</strong></p>
-        <ul>
-            <li><a href="mailto:support@itpuertorico.com">support@itpuertorico.com</a></li>
-            <li><a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></li>
-            <li><a href="mailto:accounting@itpuertorico.com">accounting@itpuertorico.com</a></li>
-        </ul>
-    </section>
-    <footer>
-        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+        <p><strong>
