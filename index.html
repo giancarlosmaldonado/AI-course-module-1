@@ -39,29 +39,40 @@
         nav a:hover {
             color: #ffcc00;
         }
-        .hero {
+        .hero-section {
             position: relative;
-            height: 400px;
+            height: 100vh;
             overflow: hidden;
-        }
-        .hero video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translate(-50%, -50%);
-            z-index: -1;
-        }
-        .hero h1 {
-            position: relative;
+            background-image: url('backgroundimage.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            font-size: 3em;
-            margin: 0;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
             text-align: center;
-            line-height: 400px;
+        }
+        .hero-section h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .hero-section p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .cta-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
         }
         section {
             padding: 50px 20px;
@@ -189,12 +200,12 @@
         <a href="#ai-training">AI Training</a>
         <a href="#contact">Contact</a>
     </nav>
-    <div class="hero">
-        <video autoplay muted loop>
-            <source src="background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h1>Unlock the Power of Artificial Intelligence Today</h1>
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Unlock the Power of Artificial Intelligence</h1>
+            <p>Learn, Innovate, and Transform Your World</p>
+            <a href="#services" class="cta-button">Get Started</a>
+        </div>
     </div>
     <section id="about">
         <h2>About Us</h2>
@@ -209,6 +220,89 @@
             </div>
         </div>
     </section>
-    <!-- Continue with the rest of the sections (Services, Support, AI Training, etc.) -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card">
+                <div class="service-heading">
+                    <img src="Brain_Icon.png" alt="Brain Icon for Machine Learning Basics">
+                    <h3>Machine Learning Basics</h3>
+                </div>
+                <p>Learn the foundational concepts of Machine Learning.</p>
+            </div>
+            <div class="card">
+                <div class="service-heading">
+                    <img src="Data_Icon.png" alt="Data Icon for Supervised Learning">
+                    <h3>Supervised Learning</h3>
+                </div>
+                <p>Explore supervised learning models and techniques.</p>
+            </div>
+            <div class="card">
+                <div class="service-heading">
+                    <img src="Cluster_Icon.png" alt="Cluster Icon for Unsupervised Learning">
+                    <h3>Unsupervised Learning</h3>
+                </div>
+                <p>Dive into unsupervised learning for clustering and pattern detection.</p>
+            </div>
+            <div class="card">
+                <div class="service-heading">
+                    <img src="Reward_Icon.png" alt="Reward Icon for Reinforcement Learning">
+                    <h3>Reinforcement Learning</h3>
+                </div>
+                <p>Understand how agents learn by interacting with environments.</p>
+            </div>
+        </div>
+    </section>
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="card">
+                <img src="antivirus.jpg" alt="Antivirus Solutions">
+                <h3>Antivirus Solutions</h3>
+                <p>Top-notch antivirus tools for security.</p>
+            </div>
+            <div class="card">
+                <img src="networking_equipment.jpg" alt="Networking Equipment">
+                <h3>Networking Equipment</h3>
+                <p>High-performance routers and switches.</p>
+            </div>
+            <div class="card">
+                <img src="custom_computers.jpg" alt="Custom-Built Computers">
+                <h3>Custom-Built Computers</h3>
+                <p>Tailored for your business needs.</p>
+            </div>
+        </div>
+    </section>
+    <section id="support">
+        <h2>Support</h2>
+        <div class="download-buttons">
+            <div>
+                <img src="buttons.jpg" alt="Download for Windows" onclick="window.location.href='https://download.splashtop.com/sos/SplashtopSOS.exe?_gl=1*vl20bd*_gcl_au*NDc5ODM3MTIzLjE3MzY0NDExNjk.*_ga*MjEzNzY5OTc0OC4xNzM2NDQxMTcx*_ga_GKBXSKZ3NW*MTczNjQ1MDgyMi4yLjEuMTczNjQ1MDg4Mi42MC4wLjA.'">
+                <p>Windows</p>
+            </div>
+            <div>
+                <img src="buttons.jpg" alt="Download for Mac" onclick="window.location.href='https://download.splashtop.com/sos/SplashtopSOS.dmg?_gl=1*vl20bd*_gcl_au*NDc5ODM3MTIzLjE3MzY0NDExNjk.*_ga*MjEzNzY5OTc0OC4xNzM2NDQxMTcx*_ga_GKBXSKZ3NW*MTczNjQ1MDgyMi4yLjEuMTczNjQ1MDg4Mi42MC4wLjA.'">
+                <p>Mac</p>
+            </div>
+        </div>
+    </section>
+    <section id="ai-training" class="ai-training">
+        <h2>AI Training</h2>
+        <p>Explore our cutting-edge AI training programs designed to help businesses leverage artificial intelligence for success. From beginner-friendly courses to advanced AI implementation strategies, we have something for everyone.</p>
+        <a href="#">Learn More</a>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> 787.400.0644</p>
+        <p><strong>Email:</strong></p>
+        <ul>
+            <li><a href="mailto:support@itpuertorico.com">support@itpuertorico.com</a></li>
+            <li><a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></li>
+            <li><a href="mailto:accounting@itpuertorico.com">accounting@itpuertorico.com</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+    </footer>
 </body>
 </html>
