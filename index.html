@@ -3,148 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Law Firms - Interactive Course</title>
+    <title>IT Puerto Rico</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
         }
         header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
+            background: #0057a4;
+            color: white;
+            padding: 10px 20px;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: auto;
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #003366;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        section {
             padding: 20px;
         }
-        .slide {
-            display: none;
+        .download-buttons img {
+            width: 100px;
+            margin: 10px;
         }
-        .slide.active {
-            display: block;
-        }
-        .navigation {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .navigation button {
-            padding: 10px 20px;
-            margin: 5px;
-            border: none;
-            background-color: #007BFF;
+        footer {
+            background: #0057a4;
             color: white;
-            cursor: pointer;
-        }
-        .navigation button:hover {
-            background-color: #0056b3;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AI for Law Firms - Interactive Course</h1>
+        <img src="logo_placeholder.png" alt="IT Puerto Rico Logo" style="width: 200px;">
+        <h1>IT Puerto Rico</h1>
+        <p>Your Trusted Partner in Technology Solutions</p>
     </header>
-
-    <div class="container">
-        <!-- Slides -->
-        <div class="slide active" id="slide1">
-            <h2>Lesson 1: Introduction to AI</h2>
-            <p>AI refers to systems or machines that mimic human intelligence to perform tasks and improve themselves through data collection.</p>
-            <ul>
-                <li><strong>ChatGPT:</strong> Drafts professional emails and legal documents.</li>
-                <li><strong>Siri:</strong> Acts as a voice command assistant.</li>
-                <li><strong>Netflix:</strong> Recommends shows based on user preferences.</li>
-            </ul>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we serve businesses across Puerto Rico with comprehensive IT services designed to meet their unique needs.</p>
+    </section>
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Network Setup & Management</li>
+            <li>Cybersecurity Solutions</li>
+            <li>Remote IT Support</li>
+            <li>Cloud Computing Services</li>
+            <li>Custom Software Development</li>
+        </ul>
+    </section>
+    <section id="products">
+        <h2>Our Products</h2>
+        <ul>
+            <li>Antivirus Solutions</li>
+            <li>Networking Equipment</li>
+            <li>Custom-Built Computers</li>
+        </ul>
+    </section>
+    <section id="support">
+        <h2>Support</h2>
+        <p>Download Splashtop SOS for remote support:</p>
+        <div class="download-buttons">
+            <a href="https://www.splashtop.com/downloads/sos/windows" target="_blank">
+                <img src="windows_button_placeholder.png" alt="Download for Windows">
+            </a>
+            <a href="https://www.splashtop.com/downloads/sos/mac" target="_blank">
+                <img src="mac_button_placeholder.png" alt="Download for Mac">
+            </a>
         </div>
-
-        <div class="slide" id="slide2">
-            <h2>Lesson 2: Current AI Technology</h2>
-            <p>Explore how AI is used today in various industries:</p>
-            <ul>
-                <li><strong>Law:</strong> Tools like Kira Systems for contract review.</li>
-                <li><strong>Healthcare:</strong> Diagnostics and treatment planning.</li>
-                <li><strong>Retail:</strong> Personalization and customer recommendations.</li>
-            </ul>
-        </div>
-
-        <div class="slide" id="slide3">
-            <h2>Lesson 3: AI Tools Overview</h2>
-            <p>Key tools for law firms:</p>
-            <ul>
-                <li><strong>ChatGPT:</strong> Drafts legal letters and generates ideas.</li>
-                <li><strong>Otter.ai:</strong> Converts meeting notes into text.</li>
-                <li><strong>Calendly:</strong> Automates scheduling tasks.</li>
-            </ul>
-        </div>
-
-        <div class="slide" id="slide4">
-            <h2>Lesson 4: Pricing and Access</h2>
-            <p>Compare free and paid tools:</p>
-            <ul>
-                <li><strong>Free:</strong> ChatGPT (basic), Otter.ai (free plan).</li>
-                <li><strong>Paid:</strong> ChatGPT Plus ($20/month), Kira Systems (enterprise pricing).</li>
-            </ul>
-        </div>
-
-        <div class="slide" id="slide5">
-            <h2>Lesson 5: Success Stories</h2>
-            <p><strong>Case Study 1:</strong> A mid-sized law firm reduced contract review time by 40% using Kira Systems.</p>
-            <p><strong>Case Study 2:</strong> Chatbots improved client response times by 30% for small firms.</p>
-        </div>
-
-        <div class="slide" id="quiz">
-            <h2>Quiz: Test Your Knowledge</h2>
-            <form>
-                <p>1. What is AI's primary purpose in law firms?</p>
-                <input type="radio" name="q1" value="a"> Replace lawyers<br>
-                <input type="radio" name="q1" value="b"> Enhance productivity and efficiency<br>
-                <input type="radio" name="q1" value="c"> Perform tasks without training<br>
-
-                <p>2. Which tool is best for meeting transcription?</p>
-                <input type="radio" name="q2" value="a"> ChatGPT<br>
-                <input type="radio" name="q2" value="b"> Otter.ai<br>
-                <input type="radio" name="q2" value="c"> Calendly<br>
-
-                <p>3. Name one benefit of using AI in law firms.</p>
-                <input type="text" name="q3" placeholder="Your answer here"><br>
-
-                <input type="submit" value="Submit Answers">
-            </form>
-        </div>
-
-        <!-- Navigation -->
-        <div class="navigation">
-            <button onclick="prevSlide()">Previous</button>
-            <button onclick="nextSlide()">Next</button>
-        </div>
-    </div>
-
-    <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-
-        function prevSlide() {
-            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-            showSlide(currentSlide);
-        }
-    </script>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p><strong>Phone:</strong> 787.400.0644</p>
+        <p><strong>Email:</strong></p>
+        <ul>
+            <li><a href="mailto:support@itpuertorico.com">support@itpuertorico.com</a></li>
+            <li><a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></li>
+            <li><a href="mailto:accounting@itpuertorico.com">accounting@itpuertorico.com</a></li>
+        </ul>
+    </section>
+    <footer>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+    </footer>
 </body>
 </html>
-
-
