@@ -159,6 +159,16 @@
         .ai-training a:hover {
             background: #0078d7;
         }
+        .service-heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+        }
+        .service-heading img {
+            width: 64px;
+            height: 64px;
+        }
     </style>
 </head>
 <body>
@@ -182,36 +192,36 @@
         </video>
         <h1>Empowering Businesses with Technology</h1>
     </div>
-    <section id="about">
-        <h2>About Us</h2>
-        <div class="about-section">
-            <img src="aboutus.jpg" alt="About Us">
-            <div>
-                <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we have established ourselves as a leader in the IT industry, dedicated to serving businesses across Puerto Rico. Our mission is to empower your business through tailored IT services that not only meet but exceed your unique needs.</p>
-                <p>At IT Puerto Rico, we believe in building lasting relationships with our clients by providing reliable, high-quality services that drive business success. Our team of experienced professionals is deeply knowledgeable about the latest technologies and industry standards, which allows us to offer solutions that are not only innovative but also practical and scalable.</p>
-                <p>Our comprehensive range of services includes IT consulting, system integration, security solutions, cloud computing, and managed IT services. We specialize in designing customized solutions that help our clients streamline operations, increase productivity, and enhance security.</p>
-                <p>We are committed to your success and are proud to play a key role in the growth and prosperity of local businesses. Whether you are looking to modernize your IT infrastructure, secure your digital assets, or optimize your operational workflow, IT Puerto Rico is here to guide you every step of the way.</p>
-                <p>Join the many businesses that trust IT Puerto Rico for their technology needs and let us help you navigate the ever-changing world of IT with confidence and ease.</p>
-            </div>
-        </div>
-    </section>
     <section id="services">
         <h2>Our Services</h2>
         <div class="services">
             <div class="card">
-                <img src="network_setup.jpg" alt="Network Setup">
-                <h3>Network Setup</h3>
-                <p>Secure and reliable network solutions for businesses.</p>
+                <div class="service-heading">
+                    <img src="Brain_Icon.png" alt="Brain Icon">
+                    <h3>Machine Learning Basics</h3>
+                </div>
+                <p>Learn the foundational concepts of Machine Learning.</p>
             </div>
             <div class="card">
-                <img src="cybersecurity.jpg" alt="Cybersecurity">
-                <h3>Cybersecurity</h3>
-                <p>Protecting your business from digital threats.</p>
+                <div class="service-heading">
+                    <img src="Data_Icon.png" alt="Data Icon">
+                    <h3>Supervised Learning</h3>
+                </div>
+                <p>Explore supervised learning models and techniques.</p>
             </div>
             <div class="card">
-                <img src="cloud_solutions.jpg" alt="Cloud Solutions">
-                <h3>Cloud Solutions</h3>
-                <p>Streamlining your operations with the cloud.</p>
+                <div class="service-heading">
+                    <img src="Cluster_Icon.png" alt="Cluster Icon">
+                    <h3>Unsupervised Learning</h3>
+                </div>
+                <p>Dive into unsupervised learning for clustering and pattern detection.</p>
+            </div>
+            <div class="card">
+                <div class="service-heading">
+                    <img src="Reward_Icon.png" alt="Reward Icon">
+                    <h3>Reinforcement Learning</h3>
+                </div>
+                <p>Understand how agents learn by interacting with environments.</p>
             </div>
         </div>
     </section>
