@@ -9,11 +9,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #0057a4, #ffffff);
+            color: #333;
         }
         header {
             background: #0057a4;
             color: white;
-            padding: 10px 20px;
+            padding: 20px;
             text-align: center;
         }
         nav {
@@ -26,13 +28,56 @@
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            position: relative;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        nav a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ffcc00;
+            left: 50%;
+            bottom: -5px;
+            transition: width 0.3s ease, left 0.3s ease;
+        }
+        nav a:hover:after {
+            width: 100%;
+            left: 0;
         }
         section {
-            padding: 20px;
+            padding: 40px;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .parallax {
+            background-image: url('background_placeholder.jpg');
+            height: 300px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .download-buttons img {
             width: 100px;
             margin: 10px;
+            transition: transform 0.3s ease;
+        }
+        .download-buttons img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px #ffcc00;
         }
         footer {
             background: #0057a4;
@@ -58,6 +103,7 @@
         <a href="#support">Support</a>
         <a href="#contact">Contact Us</a>
     </nav>
+    <div class="parallax"></div>
     <section id="about">
         <h2>About Us</h2>
         <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we serve businesses across Puerto Rico with comprehensive IT services designed to meet their unique needs.</p>
