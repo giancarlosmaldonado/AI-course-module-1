@@ -6,6 +6,7 @@
     <title>IT Puerto Rico</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -14,6 +15,11 @@
             color: #333;
             padding-top: 80px; /* Adjust for sticky header */
         }
+        img {
+            max-width: 100%;
+        }
+
+        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -28,7 +34,6 @@
         }
         .logo a img {
             height: 50px;
-            margin-right: 20px;
         }
         nav {
             display: flex;
@@ -57,34 +62,8 @@
             text-decoration: none;
             font-weight: bold;
         }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-        .menu-toggle {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-                flex-direction: column;
-                background-color: #ffffff;
-                position: absolute;
-                top: 60px;
-                right: 20px;
-                width: 200px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            }
-            nav.show {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-        }
+
+        /* Hero Section */
         .hero-section {
             position: relative;
             height: 100vh;
@@ -106,59 +85,62 @@
             font-size: 1.5em;
             margin: 20px 0;
         }
-        .hero-section .cta-buttons {
+
+        /* Our Services Section */
+        #services {
+            padding: 50px 20px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .services {
             display: flex;
+            flex-wrap: wrap;
             gap: 20px;
+            justify-content: center;
         }
-        .about-section {
-            background-image: url('about-us-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 50px 20px;
-        }
-        .signup-section {
-            background-image: url('signup-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .signup-section form {
-            background: rgba(0, 0, 0, 0.8);
+        .services .card {
+            flex: 1 1 calc(25% - 20px);
+            max-width: 250px;
             padding: 20px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: left;
-            max-width: 400px;
-            width: 100%;
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .signup-section label {
-            display: block;
-            margin: 10px 0 5px;
+        .services .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
-        .signup-section input, .signup-section select {
-            width: 100%;
-            padding: 8px;
+        .services img {
+            height: 64px;
             margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
         }
-        .signup-section .cta-button {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px 20px;
+        .services h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
         }
+        .services p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        /* Footer */
         .footer {
             background: #003366;
             color: white;
             text-align: center;
-            padding: 15px 20px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
         }
         .footer .social-icons img {
             width: 24px;
@@ -167,92 +149,61 @@
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">
-            <a href="/"><img src="logo.png" alt="IT Puerto Rico Logo"></a>
+            <a href="/"><img src="logo.jpg" alt="IT Puerto Rico Logo"></a>
         </div>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav id="menu">
+        <nav>
             <a href="#about" class="active">About Us</a>
             <a href="#services">Services</a>
-            <a href="#products">Products</a>
-            <a href="#support">Support</a>
-            <a href="#ai-training">AI Training</a>
-            <a href="#contact">Contact</a>
             <a href="#signup" class="cta-button">Get Started</a>
         </nav>
     </header>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
+
+    <!-- Hero Section -->
     <div class="hero-section">
         <div>
             <h1>Transforming the Future with Artificial Intelligence</h1>
             <p>Learn, Innovate, and Excel with our state-of-the-art AI solutions and training programs</p>
-            <div class="cta-buttons">
-                <a href="#services" class="cta-button">Learn More</a>
-                <a href="#signup" class="cta-button">Get Started</a>
-            </div>
         </div>
     </div>
-    <section id="about" class="about-section">
-        <h2>About Us</h2>
-        <p>With over 15 years of expertise, we’ve empowered 500+ businesses to innovate with AI.</p>
-        <div>
-            <img src="about-us-background.jpg" alt="Our Team Working with AI">
-            <p>We specialize in designing customized solutions to streamline operations, enhance productivity, and secure digital assets for our clients.</p>
-        </div>
-    </section>
+
+    <!-- Services Section -->
     <section id="services">
         <h2>Our Services</h2>
         <div class="services">
             <div class="card">
                 <img src="machine-learning-icon.png" alt="Machine Learning Icon">
                 <h3>Machine Learning Basics</h3>
-                <p>Unlock the potential of AI with our hands-on machine learning training and tools.</p>
+                <p>Unlock the potential of AI with hands-on training and tools.</p>
             </div>
             <div class="card">
                 <img src="supervised-learning-icon.png" alt="Supervised Learning Icon">
                 <h3>Supervised Learning</h3>
-                <p>Explore supervised learning models and techniques with real-world examples.</p>
+                <p>Explore supervised learning models with real-world examples.</p>
             </div>
             <div class="card">
                 <img src="unsupervised-learning-icon.png" alt="Unsupervised Learning Icon">
                 <h3>Unsupervised Learning</h3>
-                <p>Dive into unsupervised learning for clustering and pattern detection.</p>
+                <p>Dive into clustering and pattern detection techniques.</p>
             </div>
             <div class="card">
                 <img src="reinforcement-learning-icon.png" alt="Reinforcement Learning Icon">
                 <h3>Reinforcement Learning</h3>
-                <p>Understand how agents learn by interacting with environments.</p>
+                <p>Understand how agents interact with environments.</p>
             </div>
         </div>
     </section>
-    <section id="signup" class="signup-section">
-        <h2>Join Our Community</h2>
-        <p>Sign up today to unlock exclusive AI resources and updates.</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="interest">I'm Interested In:</label>
-            <select id="interest" name="interest">
-                <option value="ai-training">AI Training</option>
-                <option value="services">Services</option>
-            </select>
-            <button type="submit" class="cta-button">Sign Up</button>
-        </form>
-    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
             <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
         </div>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a></p>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
 </body>
