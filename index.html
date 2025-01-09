@@ -4,95 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Puerto Rico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #0057a4, #ffffff);
+            background-color: #f8f9fa;
             color: #333;
         }
         header {
-            background: #0057a4;
+            background: linear-gradient(90deg, #0057a4, #0078d7);
             color: white;
             padding: 20px;
             text-align: center;
+        }
+        header img {
+            width: 150px;
         }
         nav {
             display: flex;
             justify-content: center;
             background: #003366;
-            padding: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
         nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
-            position: relative;
+            font-weight: bold;
+            transition: color 0.3s;
         }
         nav a:hover {
             color: #ffcc00;
         }
-        nav a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #ffcc00;
-            left: 50%;
-            bottom: -5px;
-            transition: width 0.3s ease, left 0.3s ease;
+        .hero {
+            background: url('hero_placeholder.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
-        nav a:hover:after {
-            width: 100%;
-            left: 0;
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
         }
         section {
-            padding: 40px;
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
             text-align: center;
-            animation: fadeIn 1s ease-in;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .services, .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .parallax {
-            background-image: url('background_placeholder.jpg');
-            height: 300px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        .card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s;
         }
-        .download-buttons img {
-            width: 100px;
-            margin: 10px;
-            transition: transform 0.3s ease;
+        .card:hover {
+            transform: scale(1.05);
         }
-        .download-buttons img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 10px #ffcc00;
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .download-buttons a {
+            display: inline-block;
+            margin: 15px;
+            padding: 10px 20px;
+            color: white;
+            background: #0057a4;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .download-buttons a:hover {
+            background: #0078d7;
         }
         footer {
-            background: #0057a4;
+            background: #003366;
             color: white;
             text-align: center;
-            padding: 10px 20px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            padding: 15px 20px;
+            margin-top: 50px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo_placeholder.png" alt="IT Puerto Rico Logo" style="width: 200px;">
+        <img src="logo_placeholder.png" alt="IT Puerto Rico Logo">
         <h1>IT Puerto Rico</h1>
         <p>Your Trusted Partner in Technology Solutions</p>
     </header>
@@ -101,41 +110,55 @@
         <a href="#services">Services</a>
         <a href="#products">Products</a>
         <a href="#support">Support</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <div class="parallax"></div>
+    <div class="hero">
+        <h1>Empowering Businesses with Technology</h1>
+    </div>
     <section id="about">
         <h2>About Us</h2>
         <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we serve businesses across Puerto Rico with comprehensive IT services designed to meet their unique needs.</p>
     </section>
     <section id="services">
         <h2>Our Services</h2>
-        <ul>
-            <li>Network Setup & Management</li>
-            <li>Cybersecurity Solutions</li>
-            <li>Remote IT Support</li>
-            <li>Cloud Computing Services</li>
-            <li>Custom Software Development</li>
-        </ul>
+        <div class="services">
+            <div class="card">
+                <h3>Network Setup</h3>
+                <p>Secure and reliable network solutions for businesses.</p>
+            </div>
+            <div class="card">
+                <h3>Cybersecurity</h3>
+                <p>Protecting your business from digital threats.</p>
+            </div>
+            <div class="card">
+                <h3>Cloud Solutions</h3>
+                <p>Streamlining your operations with the cloud.</p>
+            </div>
+        </div>
     </section>
     <section id="products">
         <h2>Our Products</h2>
-        <ul>
-            <li>Antivirus Solutions</li>
-            <li>Networking Equipment</li>
-            <li>Custom-Built Computers</li>
-        </ul>
+        <div class="products">
+            <div class="card">
+                <h3>Antivirus Solutions</h3>
+                <p>Top-notch antivirus tools for security.</p>
+            </div>
+            <div class="card">
+                <h3>Networking Equipment</h3>
+                <p>High-performance routers and switches.</p>
+            </div>
+            <div class="card">
+                <h3>Custom-Built Computers</h3>
+                <p>Tailored for your business needs.</p>
+            </div>
+        </div>
     </section>
     <section id="support">
         <h2>Support</h2>
         <p>Download Splashtop SOS for remote support:</p>
         <div class="download-buttons">
-            <a href="https://www.splashtop.com/downloads/sos/windows" target="_blank">
-                <img src="windows_button_placeholder.png" alt="Download for Windows">
-            </a>
-            <a href="https://www.splashtop.com/downloads/sos/mac" target="_blank">
-                <img src="mac_button_placeholder.png" alt="Download for Mac">
-            </a>
+            <a href="https://www.splashtop.com/sos" target="_blank">Download for Windows</a>
+            <a href="https://www.splashtop.com/sos" target="_blank">Download for Mac</a>
         </div>
     </section>
     <section id="contact">
