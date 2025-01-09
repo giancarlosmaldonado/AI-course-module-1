@@ -117,7 +117,7 @@
         .download-buttons img {
             width: 120px;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.3s ease-in-out;
         }
         .download-buttons img:hover {
             transform: scale(1.1);
@@ -168,6 +168,10 @@
         .service-heading img {
             width: 64px;
             height: 64px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .service-heading img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
@@ -197,28 +201,28 @@
         <div class="services">
             <div class="card">
                 <div class="service-heading">
-                    <img src="Brain_Icon.png" alt="Brain Icon">
+                    <img src="Brain_Icon.png" alt="Brain Icon for Machine Learning Basics">
                     <h3>Machine Learning Basics</h3>
                 </div>
                 <p>Learn the foundational concepts of Machine Learning.</p>
             </div>
             <div class="card">
                 <div class="service-heading">
-                    <img src="Data_Icon.png" alt="Data Icon">
+                    <img src="Data_Icon.png" alt="Data Icon for Supervised Learning">
                     <h3>Supervised Learning</h3>
                 </div>
                 <p>Explore supervised learning models and techniques.</p>
             </div>
             <div class="card">
                 <div class="service-heading">
-                    <img src="Cluster_Icon.png" alt="Cluster Icon">
+                    <img src="Cluster_Icon.png" alt="Cluster Icon for Unsupervised Learning">
                     <h3>Unsupervised Learning</h3>
                 </div>
                 <p>Dive into unsupervised learning for clustering and pattern detection.</p>
             </div>
             <div class="card">
                 <div class="service-heading">
-                    <img src="Reward_Icon.png" alt="Reward Icon">
+                    <img src="Reward_Icon.png" alt="Reward Icon for Reinforcement Learning">
                     <h3>Reinforcement Learning</h3>
                 </div>
                 <p>Understand how agents learn by interacting with environments.</p>
