@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI for Law Firms - Module 1</title>
+    <title>AI for Law Firms - Interactive Course</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,136 +17,134 @@
             padding: 10px 0;
             text-align: center;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.1em;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
+        .container {
             max-width: 800px;
             margin: auto;
+            padding: 20px;
         }
-        h1, h2 {
-            color: #333;
+        .slide {
+            display: none;
         }
-        .quiz {
-            background: #f4f4f4;
-            padding: 15px;
-            border: 1px solid #ccc;
-            margin: 15px 0;
+        .slide.active {
+            display: block;
         }
-        .quiz input[type="submit"] {
-            background: #007BFF;
-            color: #fff;
-            padding: 10px 15px;
+        .navigation {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .navigation button {
+            padding: 10px 20px;
+            margin: 5px;
             border: none;
+            background-color: #007BFF;
+            color: white;
             cursor: pointer;
         }
-        .quiz input[type="submit"]:hover {
-            background: #0056b3;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px 0;
+        .navigation button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>AI for Law Firms - Module 1</h1>
+        <h1>AI for Law Firms - Interactive Course</h1>
     </header>
-    <nav>
-        <a href="#lesson1">Introduction to AI</a>
-        <a href="#lesson2">Current AI Technology</a>
-        <a href="#lesson3">AI Tools Overview</a>
-        <a href="#lesson4">Pricing and Access</a>
-        <a href="#lesson5">Success Stories</a>
-    </nav>
 
-    <section id="lesson1">
-        <h2>Lesson 1: Introduction to AI</h2>
-        <p>AI refers to systems or machines that mimic human intelligence to perform tasks and improve themselves through data collection.</p>
-        <p>Examples include:</p>
-        <ul>
-            <li><strong>ChatGPT:</strong> Drafts professional emails and legal documents.</li>
-            <li><strong>Siri:</strong> Acts as a voice command assistant.</li>
-            <li><strong>Netflix:</strong> Recommends shows based on user preferences.</li>
-        </ul>
-        <p><strong>Visual Explanation:</strong> Imagine AI as a virtual team member helping with repetitive or data-driven tasks.</p>
-    </section>
+    <div class="container">
+        <!-- Slides -->
+        <div class="slide active" id="slide1">
+            <h2>Lesson 1: Introduction to AI</h2>
+            <p>AI refers to systems or machines that mimic human intelligence to perform tasks and improve themselves through data collection.</p>
+            <ul>
+                <li><strong>ChatGPT:</strong> Drafts professional emails and legal documents.</li>
+                <li><strong>Siri:</strong> Acts as a voice command assistant.</li>
+                <li><strong>Netflix:</strong> Recommends shows based on user preferences.</li>
+            </ul>
+        </div>
 
-    <section id="lesson2">
-        <h2>Lesson 2: Current AI Technology</h2>
-        <p>Explore how AI is used today in various industries:</p>
-        <ul>
-            <li><strong>Law:</strong> Tools like Kira Systems for contract review.</li>
-            <li><strong>Healthcare:</strong> Diagnostics and treatment planning.</li>
-            <li><strong>Retail:</strong> Personalization and customer recommendations.</li>
-        </ul>
-        <p><strong>Benefits:</strong> Efficiency, cost savings, scalability.</p>
-        <p><strong>Challenges:</strong> Ethical considerations, training needs.</p>
-    </section>
+        <div class="slide" id="slide2">
+            <h2>Lesson 2: Current AI Technology</h2>
+            <p>Explore how AI is used today in various industries:</p>
+            <ul>
+                <li><strong>Law:</strong> Tools like Kira Systems for contract review.</li>
+                <li><strong>Healthcare:</strong> Diagnostics and treatment planning.</li>
+                <li><strong>Retail:</strong> Personalization and customer recommendations.</li>
+            </ul>
+        </div>
 
-    <section id="lesson3">
-        <h2>Lesson 3: AI Tools Overview</h2>
-        <p>Key tools for law firms:</p>
-        <ul>
-            <li><strong>ChatGPT:</strong> Drafts legal letters and generates ideas.</li>
-            <li><strong>Otter.ai:</strong> Converts meeting notes into text.</li>
-            <li><strong>Calendly:</strong> Automates scheduling tasks.</li>
-        </ul>
-        <p><strong>Exercise:</strong> Try using ChatGPT to draft a response to a client inquiry.</p>
-    </section>
+        <div class="slide" id="slide3">
+            <h2>Lesson 3: AI Tools Overview</h2>
+            <p>Key tools for law firms:</p>
+            <ul>
+                <li><strong>ChatGPT:</strong> Drafts legal letters and generates ideas.</li>
+                <li><strong>Otter.ai:</strong> Converts meeting notes into text.</li>
+                <li><strong>Calendly:</strong> Automates scheduling tasks.</li>
+            </ul>
+        </div>
 
-    <section id="lesson4">
-        <h2>Lesson 4: Pricing and Access</h2>
-        <p>Compare free and paid tools:</p>
-        <ul>
-            <li><strong>Free:</strong> ChatGPT (basic), Otter.ai (free plan).</li>
-            <li><strong>Paid:</strong> ChatGPT Plus ($20/month), Kira Systems (enterprise pricing).</li>
-        </ul>
-        <p><strong>Exercise:</strong> Create a budget plan for adopting AI tools in your firm.</p>
-    </section>
+        <div class="slide" id="slide4">
+            <h2>Lesson 4: Pricing and Access</h2>
+            <p>Compare free and paid tools:</p>
+            <ul>
+                <li><strong>Free:</strong> ChatGPT (basic), Otter.ai (free plan).</li>
+                <li><strong>Paid:</strong> ChatGPT Plus ($20/month), Kira Systems (enterprise pricing).</li>
+            </ul>
+        </div>
 
-    <section id="lesson5">
-        <h2>Lesson 5: Success Stories</h2>
-        <p><strong>Case Study 1:</strong> A mid-sized law firm reduced contract review time by 40% using Kira Systems.</p>
-        <p><strong>Case Study 2:</strong> Chatbots improved client response times by 30% for small firms.</p>
-        <p><strong>Exercise:</strong> Identify one area in your firm that could benefit from an AI-powered solution.</p>
-    </section>
+        <div class="slide" id="slide5">
+            <h2>Lesson 5: Success Stories</h2>
+            <p><strong>Case Study 1:</strong> A mid-sized law firm reduced contract review time by 40% using Kira Systems.</p>
+            <p><strong>Case Study 2:</strong> Chatbots improved client response times by 30% for small firms.</p>
+        </div>
 
-    <section class="quiz">
-        <h3>Quiz: Test Your Knowledge</h3>
-        <form>
-            <p>1. What is AI's primary purpose in law firms?</p>
-            <input type="radio" name="q1" value="a"> Replace lawyers<br>
-            <input type="radio" name="q1" value="b"> Enhance productivity and efficiency<br>
-            <input type="radio" name="q1" value="c"> Perform tasks without training<br>
+        <div class="slide" id="quiz">
+            <h2>Quiz: Test Your Knowledge</h2>
+            <form>
+                <p>1. What is AI's primary purpose in law firms?</p>
+                <input type="radio" name="q1" value="a"> Replace lawyers<br>
+                <input type="radio" name="q1" value="b"> Enhance productivity and efficiency<br>
+                <input type="radio" name="q1" value="c"> Perform tasks without training<br>
 
-            <p>2. Which tool is best for meeting transcription?</p>
-            <input type="radio" name="q2" value="a"> ChatGPT<br>
-            <input type="radio" name="q2" value="b"> Otter.ai<br>
-            <input type="radio" name="q2" value="c"> Calendly<br>
+                <p>2. Which tool is best for meeting transcription?</p>
+                <input type="radio" name="q2" value="a"> ChatGPT<br>
+                <input type="radio" name="q2" value="b"> Otter.ai<br>
+                <input type="radio" name="q2" value="c"> Calendly<br>
 
-            <p>3. Name one benefit of using AI in law firms.</p>
-            <input type="text" name="q3" placeholder="Your answer here"><br>
+                <p>3. Name one benefit of using AI in law firms.</p>
+                <input type="text" name="q3" placeholder="Your answer here"><br>
 
-            <input type="submit" value="Submit Answers">
-        </form>
-    </section>
+                <input type="submit" value="Submit Answers">
+            </form>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button onclick="prevSlide()">Previous</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+    </script>
 </body>
 </html>
+
 
