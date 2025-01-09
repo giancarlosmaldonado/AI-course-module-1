@@ -40,17 +40,28 @@
             color: #ffcc00;
         }
         .hero {
-            background: url('https://www.discoverpuertorico.com/sites/all/themes/discoverpr/images/bg-main-slider.jpg') no-repeat center center/cover;
+            position: relative;
             height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+        .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translate(-50%, -50%);
+            z-index: -1;
         }
         .hero h1 {
+            position: relative;
+            color: white;
             font-size: 3em;
             margin: 0;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            line-height: 400px;
         }
         section {
             padding: 50px 20px;
@@ -147,6 +158,10 @@
         <a href="#contact">Contact</a>
     </nav>
     <div class="hero">
+        <video autoplay muted loop>
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <h1>Empowering Businesses with Technology</h1>
     </div>
     <section id="about">
