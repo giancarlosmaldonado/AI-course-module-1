@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Puerto Rico</title>
+    <title>IT Puerto Rico | Innovating with AI</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+        /* General styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
             color: #333;
-            padding-top: 80px; /* Adjust for sticky header */
+            line-height: 1.6;
         }
-        img {
-            max-width: 100%;
-        }
-
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -32,240 +28,217 @@
             justify-content: space-between;
             padding: 10px 20px;
         }
-        .logo a img {
+        .logo img {
             height: 50px;
         }
         nav {
             display: flex;
-            align-items: center;
+            gap: 15px;
         }
         nav a {
-            color: #333;
             text-decoration: none;
-            padding: 10px 15px;
             font-weight: bold;
-            transition: color 0.3s, border-bottom 0.3s;
+            padding: 10px 15px;
+            color: #333;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
         nav a:hover {
             color: #007bff;
-            border-bottom: 2px solid #007bff;
+            background-color: #f1f1f1;
         }
         nav a.active {
-            color: #0056b3;
-            border-bottom: 2px solid #0056b3;
+            color: #fff;
+            background-color: #007bff;
         }
         .cta-button {
             background-color: #007bff;
-            color: white;
-            padding: 8px 15px;
+            color: #fff;
+            padding: 10px 15px;
             border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        .menu-toggle {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
         }
 
         /* Hero Section */
         .hero-section {
-            position: relative;
             height: 100vh;
-            overflow: hidden;
-        }
-        .hero-section video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .hero-section div {
-            position: relative;
+            background-image: url('hero-background.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
             color: white;
-            margin-top: 30vh;
         }
         .hero-section h1 {
-            font-size: 3em;
+            font-size: 3.5em;
+            margin-bottom: 10px;
             font-weight: bold;
-            margin: 0;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
         .hero-section p {
             font-size: 1.5em;
-            margin: 20px 0;
+            margin-bottom: 20px;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
         }
 
-        /* Our Services Section */
-        #services {
+        /* About Section */
+        #about {
             padding: 50px 20px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        .services {
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 20px;
-            justify-content: center;
         }
-        .services .card {
-            flex: 1 1 calc(25% - 20px);
-            max-width: 250px;
-            padding: 20px;
-            background: #f8f9fa;
-            border: 1px solid #ddd;
+        #about img {
+            width: 40%;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .services .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-        .services img {
-            display: block;
-            margin: 0 auto 10px;
-            transition: transform 0.3s ease;
-        }
-        .services .card:hover img {
-            transform: scale(1.1);
+        #about p {
+            font-size: 1.2em;
         }
 
-        /* Signup Section */
-        .signup-section {
-            background-image: url('signup-background.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
+        /* Services Section */
+        #services {
             padding: 50px 20px;
-        }
-        .signup-section form {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 20px;
-            border-radius: 8px;
-            display: inline-block;
-            text-align: left;
-            max-width: 400px;
-            width: 100%;
-        }
-        .signup-section label {
-            display: block;
-            margin: 10px 0 5px;
-        }
-        .signup-section input, .signup-section select {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-        }
-        .signup-section .cta-button {
-            display: block;
-            width: 100%;
+            background-color: #f1f1f1;
             text-align: center;
-            padding: 10px 20px;
+        }
+        #services h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .services-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .service-card {
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+        .service-card img {
+            width: 64px;
+            margin-bottom: 15px;
         }
 
         /* Footer */
-        .footer {
+        footer {
             background: #003366;
             color: white;
-            text-align: center;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            text-align: center;
         }
-        .footer a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        .footer a:hover {
-            text-decoration: underline;
-        }
-        .footer .social-icons img {
+        footer .social-icons img {
             width: 24px;
             margin: 0 10px;
+            transition: transform 0.3s;
+        }
+        footer .social-icons img:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo">
             <a href="/"><img src="logo.jpg" alt="IT Puerto Rico Logo"></a>
         </div>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
             <a href="#about" class="active">About Us</a>
             <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#support">Support</a>
+            <a href="#ai-training">AI Training</a>
+            <a href="#contact">Contact</a>
             <a href="#signup" class="cta-button">Get Started</a>
         </nav>
     </header>
-
-    <!-- Hero Section -->
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
     <div class="hero-section">
-        <video autoplay muted loop playsinline>
-            <source src="hero-background.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
         <div>
-            <h1>Transforming the Future with Artificial Intelligence</h1>
-            <p>Learn, Innovate, and Excel with our state-of-the-art AI solutions and training programs</p>
+            <h1>Empower Your Business with AI</h1>
+            <p>Discover world-class AI solutions to elevate your success.</p>
+            <div class="cta-buttons">
+                <a href="#services" class="cta-button">Learn More</a>
+                <a href="#signup" class="cta-button">Get Started</a>
+            </div>
         </div>
     </div>
-
-    <!-- Services Section -->
+    <section id="about">
+        <img src="aboutus.jpg" alt="About Us">
+        <div>
+            <h2>About Us</h2>
+            <p>Leading in AI innovation for 15+ years, we transform businesses with tailored solutions.</p>
+        </div>
+    </section>
     <section id="services">
         <h2>Our Services</h2>
-        <div class="services">
-            <div class="card">
-                <img src="machine-learning-icon.png" alt="Machine Learning Icon">
-                <h3>Machine Learning Basics</h3>
-                <p>Unlock the potential of AI with hands-on training and tools.</p>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="Brain_Icon.png" alt="Brain Icon">
+                <h3>Machine Learning</h3>
+                <p>Explore AI's possibilities with expert tools and insights.</p>
             </div>
-            <div class="card">
-                <img src="supervised-learning-icon.png" alt="Supervised Learning Icon">
-                <h3>Supervised Learning</h3>
-                <p>Explore supervised learning models with real-world examples.</p>
+            <div class="service-card">
+                <img src="Data_Icon.png" alt="Data Icon">
+                <h3>Data Analysis</h3>
+                <p>Transform raw data into actionable strategies.</p>
             </div>
-            <div class="card">
-                <img src="unsupervised-learning-icon.png" alt="Unsupervised Learning Icon">
-                <h3>Unsupervised Learning</h3>
-                <p>Dive into clustering and pattern detection techniques.</p>
-            </div>
-            <div class="card">
-                <img src="reinforcement-learning-icon.png" alt="Reinforcement Learning Icon">
-                <h3>Reinforcement Learning</h3>
-                <p>Understand how agents interact with environments.</p>
+            <div class="service-card">
+                <img src="Cluster_Icon.png" alt="Cluster Icon">
+                <h3>Clustering</h3>
+                <p>Discover hidden patterns with advanced clustering algorithms.</p>
             </div>
         </div>
     </section>
-
-    <!-- Signup Section -->
-    <section id="signup" class="signup-section">
-        <h2>Join Our Community</h2>
-        <p>Sign up today to unlock exclusive AI resources and updates.</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="interest">I'm Interested In:</label>
-            <select id="interest" name="interest">
-                <option value="ai-training">AI Training</option>
-                <option value="services">Services</option>
-            </select>
-            <button type="submit" class="cta-button">Sign Up</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
             <a href="https://linkedin.com" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a>
         </div>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Sitemap</a></p>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
 </body>
