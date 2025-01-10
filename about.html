@@ -6,6 +6,7 @@
     <title>About Us - IT Puerto Rico</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -13,17 +14,24 @@
             background-color: #f8f9fa;
             color: #333;
         }
+
+        /* Header */
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
         }
-        .logo img {
-            height: 80px;
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
         }
         nav {
             display: flex;
@@ -34,14 +42,19 @@
             font-weight: bold;
             padding: 10px 15px;
             color: #333;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
         nav a:hover {
+            background-color: #f1f1f1;
             color: #007bff;
         }
+
+        /* About Us Section */
         #about {
             padding: 50px 20px;
             max-width: 1200px;
-            margin: auto;
+            margin: 80px auto 20px; /* Adjusted margin to fit under fixed header */
         }
         #about img {
             max-width: 30%;
@@ -55,15 +68,27 @@
         }
         #about p {
             font-size: 1.2em;
-            text-align: justify;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        #about::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="IT Puerto Rico Logo">
-        </div>
+        <span class="company-name">IT Puerto Rico</span>
         <nav>
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -76,7 +101,16 @@
         <img src="aboutus.jpg" alt="About Us">
         <h2>About Us</h2>
         <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we are proud to serve businesses across Puerto Rico with comprehensive IT services designed to meet the unique needs of our community.</p>
-        <p>Our roots run deep in the world of technology...</p>
+        <p>Our roots run deep in the world of technology—our family has been pioneers in the IT field on the island, dedicated to advancing innovation and crafting solutions that empower local businesses. This legacy, combined with our experience, passion, and expertise, makes us more than just a service provider. We’re your reliable partner in navigating the ever-evolving digital landscape.</p>
+        <p>At IT Puerto Rico, we specialize in a wide range of IT services, including network setup and management, cybersecurity solutions, cloud computing, and custom software development. We also provide IT consulting and on-demand remote support to ensure your business operates smoothly and securely.</p>
+        <p>What sets us apart is our commitment to the craft and our team of highly skilled professionals who are always ready to tackle any challenge. Whether you need proactive IT maintenance, assistance with hardware and software procurement, or tailored technology solutions, we’ve got you covered.</p>
+        <p>As a proud local business, we are dedicated to supporting the growth and success of our clients, big or small. When you choose IT Puerto Rico, you’re choosing a partner that understands your needs and shares your goals.</p>
+        <p>What sets IT Puerto Rico apart from competitors is our deep-rooted history and unmatched expertise in technology. Our family has been pioneers in the IT field in Puerto Rico, with generations dedicated to advancing technology on the island. With over 15 years of business success, we have built a reputation for delivering exceptional IT solutions tailored to the needs of local businesses.</p>
+        <p>As a proud local business, we understand the unique challenges and opportunities in Puerto Rico, allowing us to provide personalized service and innovative solutions that truly resonate with our community. Our dedicated team of professionals brings a wealth of experience and a passion for technology to every project, ensuring that we’re always ready to tackle any challenge.</p>
+        <p>At IT Puerto Rico, it’s not just about providing IT services—it’s about building lasting relationships with our clients and helping their businesses thrive through the power of technology. Our commitment to excellence, combined with our legacy and strong team, makes us the trusted partner for businesses across Puerto Rico.</p>
     </section>
+    <footer>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+    </footer>
 </body>
 </html>
