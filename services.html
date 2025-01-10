@@ -100,7 +100,16 @@
             text-align: center;
         }
         .service-item {
+            display: flex;
+            gap: 20px;
+            align-items: center;
             margin-bottom: 30px;
+        }
+        .service-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
         }
         .service-item h3 {
             font-size: 1.8em;
@@ -141,32 +150,34 @@
     <section id="services">
         <h2>Our Services</h2>
         <div class="service-item">
-            <h3>Network Setup & Management</h3>
-            <p><span>Designing, implementing,</span> and managing secure and reliable network solutions for businesses.</p>
-            <p>Includes VPN setup, firewall configurations, and network troubleshooting.</p>
+            <img src="networkservices.jpg" alt="Network Services">
+            <div>
+                <h3>Network Setup & Management</h3>
+                <p><span>Designing, implementing,</span> and managing secure and reliable network solutions for businesses.</p>
+                <p>Includes VPN setup, firewall configurations, and network troubleshooting.</p>
+            </div>
         </div>
         <div class="service-item">
-            <h3>Cybersecurity Solutions</h3>
-            <p><span>Endpoint protection, antivirus solutions,</span> and real-time threat monitoring.</p>
-            <p>Vulnerability assessments and penetration testing. Security training for employees.</p>
+            <img src="cybersecurity.jpg" alt="Cybersecurity Solutions">
+            <div>
+                <h3>Cybersecurity Solutions</h3>
+                <p><span>Endpoint protection, antivirus solutions,</span> and real-time threat monitoring.</p>
+                <p>Vulnerability assessments and penetration testing. Security training for employees.</p>
+            </div>
         </div>
         <div class="service-item">
-            <h3>Remote IT Support</h3>
-            <p>On-demand support for troubleshooting software and hardware issues.</p>
-            <p>Remote desktop access for problem resolution.</p>
+            <img src="cloudservices.jpg" alt="Cloud Computing Services">
+            <div>
+                <h3>Cloud Computing Services</h3>
+                <p>Cloud storage setup and migration. Integration of cloud services like Microsoft Azure, AWS, or Google Workspace.</p>
+            </div>
         </div>
         <div class="service-item">
-            <h3>Cloud Computing Services</h3>
-            <p>Cloud storage setup and migration. Integration of cloud services like Microsoft Azure, AWS, or Google Workspace.</p>
-        </div>
-        <div class="service-item">
-            <h3>Managed IT Services</h3>
-            <p><span>24/7 monitoring</span> and maintenance of IT infrastructure.</p>
-            <p>Proactive updates, backups, and patch management.</p>
-        </div>
-        <div class="service-item">
-            <h3>Custom Software Development</h3>
-            <p>Tailored software solutions to meet specific business needs. Application design, development, and testing services.</p>
+            <img src="customsoftware.jpg" alt="Custom Software Development">
+            <div>
+                <h3>Custom Software Development</h3>
+                <p>Tailored software solutions to meet specific business needs. Application design, development, and testing services.</p>
+            </div>
         </div>
     </section>
     <footer>
