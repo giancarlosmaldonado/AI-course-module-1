@@ -35,12 +35,13 @@
         }
         nav {
             display: flex;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 10px; /* Adjusted for better spacing */
         }
         nav a {
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 8px 10px; /* Reduced padding */
             color: #333;
             border-radius: 4px;
             transition: all 0.3s;
@@ -78,18 +79,6 @@
             }
         }
 
-        @media (max-width: 1024px) {
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 10px;
-            }
-            nav a {
-                font-size: 0.9em; /* Reduce button size for smaller screens */
-                padding: 8px 10px;
-            }
-        }
-
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -111,12 +100,17 @@
             object-fit: cover;
             z-index: -1;
         }
+        .hero-section .content {
+            z-index: 1;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+            border-radius: 8px;
+        }
         .hero-section h1 {
             font-size: 3em;
             font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             margin: 0;
-            z-index: 1;
         }
 
         /* Footer */
@@ -145,7 +139,9 @@
             <source src="background2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <h1>Empower Your Business with AI</h1>
+        <div class="content">
+            <h1>Empower Your Business with AI</h1>
+        </div>
     </div>
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
