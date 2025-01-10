@@ -119,69 +119,24 @@
         #about {
             padding: 50px 20px;
             background-color: #f8f9fa;
-            text-align: left;
+            text-align: justify;
             max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            gap: 20px;
         }
         #about img {
-            float: left;
-            width: 50%; /* Increased size to match text */
-            margin-right: 20px;
-            margin-bottom: 20px;
+            width: 50%;
             border-radius: 10px;
+        }
+        #about .about-content {
+            width: 50%;
         }
         #about h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
         #about p {
-            font-size: 1.2em;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        /* Services and Products Sections */
-        #services, #products {
-            padding: 50px 20px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        #services h2, #products h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .services-container, .products-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .service-card, .product-card {
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            text-align: center;
-            width: 250px;
-        }
-        .service-card img, .product-card img {
-            width: 100px;
-            height: auto;
-            margin-bottom: 15px;
-            border-radius: 5px;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 50px 20px;
-            background-color: #f8f9fa;
-            text-align: center;
-        }
-        #contact h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        #contact p {
             font-size: 1.2em;
             margin-bottom: 15px;
         }
@@ -211,7 +166,7 @@
         </div>
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav id="menu">
-            <a href="#about">About Us</a>
+            <a href="#about" class="active">About Us</a>
             <a href="#services">Services</a>
             <a href="#products">Products</a>
             <a href="#sos">SOS</a>
@@ -234,54 +189,17 @@
     </div>
     <section id="about">
         <img src="aboutus.jpg" alt="About Us">
-        <h2>About Us</h2>
-        <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success...</p>
-        <p>Our roots run deep in the world of technology—our family has been pioneers in the IT field on the island.</p>
-    </section>
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
-            <div class="service-card">
-                <img src="networkservices.jpg" alt="Network Services">
-                <h3>Network Setup & Management</h3>
-                <p>Designing, implementing, and managing secure and reliable networks.</p>
-            </div>
-            <div class="service-card">
-                <img src="cybersecurity.jpg" alt="Cybersecurity Solutions">
-                <h3>Cybersecurity Solutions</h3>
-                <p>Protection, threat monitoring, and vulnerability assessments.</p>
-            </div>
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Welcome to IT Puerto Rico, your trusted local partner in technology solutions. With over 15 years of proven success, we are proud to serve businesses across Puerto Rico with comprehensive IT services designed to meet the unique needs of our community.</p>
+            <p>Our roots run deep in the world of technology—our family has been pioneers in the IT field on the island, dedicated to advancing innovation and crafting solutions that empower local businesses. This legacy, combined with our experience, passion, and expertise, makes us more than just a service provider. We’re your reliable partner in navigating the ever-evolving digital landscape.</p>
+            <p>At IT Puerto Rico, we specialize in a wide range of IT services, including network setup and management, cybersecurity solutions, cloud computing, and custom software development. We also provide IT consulting and on-demand remote support to ensure your business operates smoothly and securely.</p>
+            <p>What sets us apart is our commitment to the craft and our team of highly skilled professionals who are always ready to tackle any challenge. Whether you need proactive IT maintenance, assistance with hardware and software procurement, or tailored technology solutions, we’ve got you covered.</p>
+            <p>As a proud local business, we are dedicated to supporting the growth and success of our clients, big or small. When you choose IT Puerto Rico, you’re choosing a partner that understands your needs and shares your goals.</p>
+            <p>What sets IT Puerto Rico apart from competitors is our deep-rooted history and unmatched expertise in technology. Our family has been pioneers in the IT field in Puerto Rico, with generations dedicated to advancing technology on the island. With over 15 years of business success, we have built a reputation for delivering exceptional IT solutions tailored to the needs of local businesses.</p>
+            <p>As a proud local business, we understand the unique challenges and opportunities in Puerto Rico, allowing us to provide personalized service and innovative solutions that truly resonate with our community. Our dedicated team of professionals brings a wealth of experience and a passion for technology to every project, ensuring that we’re always ready to tackle any challenge.</p>
+            <p>At IT Puerto Rico, it’s not just about providing IT services—it’s about building lasting relationships with our clients and helping their businesses thrive through the power of technology. Our commitment to excellence, combined with our legacy and strong team, makes us the trusted partner for businesses across Puerto Rico.</p>
         </div>
-    </section>
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="products-container">
-            <div class="product-card">
-                <img src="antivirus.jpg" alt="Antivirus Solutions">
-                <h3>Antivirus Solutions</h3>
-                <p>TrendMicro, Webroot, and other antivirus tools.</p>
-            </div>
-            <div class="product-card">
-                <img src="custombuilt.jpg" alt="Custom-Built Computers">
-                <h3>Custom-Built Computers</h3>
-                <p>High-performance PCs tailored for business, gaming, or creative use.</p>
-            </div>
-        </div>
-    </section>
-    <section id="sos">
-        <img src="sospicture.jpg" alt="SOS Support">
-        <h2>SOS Support</h2>
-        <p>Download our SOS tools to connect securely with IT support.</p>
-        <div class="download-buttons">
-            <a href="https://download.splashtop.com/sos/SplashtopSOS.dmg?_gl=1*jhyx8v*" target="_blank">Mac Download</a>
-            <a href="https://download.splashtop.com/sos/SplashtopSOS.exe?_gl=1*4ixoex*" target="_blank">Windows Download</a>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></p>
-        <p>Phone: +1-800-555-1234</p>
-        <p>Location: San Juan, Puerto Rico</p>
     </section>
     <footer>
         <div class="social-icons">
