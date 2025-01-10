@@ -6,9 +6,49 @@
     <title>IT Puerto Rico | Innovating with AI</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Additional styles for logo and hero section */
+        /* Additional styles for the header layout */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
         .logo img {
-            height: 50px; /* Reduced size */
+            height: 50px; /* Balanced logo size */
+        }
+        .company-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+        nav {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            color: #333;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #f1f1f1;
+            color: #007bff;
         }
         .hero-section {
             position: relative;
@@ -36,14 +76,15 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
             margin: 0;
             z-index: 1;
-            position: relative; /* Ensure text is above video */
+            position: relative;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="IT Puerto Rico Logo">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="IT Puerto Rico Logo" class="logo">
+            <span class="company-name">IT Puerto Rico</span>
         </div>
         <nav>
             <a href="about.html">About Us</a>
