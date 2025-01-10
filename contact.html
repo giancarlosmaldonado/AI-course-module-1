@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - IT Puerto Rico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -32,15 +32,18 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #333;
+            flex: 1;
         }
         nav {
             display: flex;
+            justify-content: center;
             gap: 15px;
+            flex: 2;
         }
         nav a {
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 8px 15px;
             color: #333;
             border-radius: 4px;
             transition: all 0.3s;
@@ -50,35 +53,69 @@
             color: #007bff;
         }
 
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                border-top: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .company-name {
+                flex: unset;
+            }
+        }
+
         /* Contact Section */
         #contact {
-            padding: 50px 20px;
-            max-width: 800px;
-            margin: 80px auto 20px; /* Adjusted margin for fixed header */
-            text-align: center; /* Center-align all contact text */
+            padding: 100px 20px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
         }
         #contact h2 {
+            font-size: 2.5em;
+            color: #003366;
             margin-bottom: 20px;
-            font-size: 2em;
+            text-transform: uppercase;
         }
-        #contact p {
+        .contact-details {
             font-size: 1.2em;
-            margin: 10px 0;
-            line-height: 1.5;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #333;
         }
-        #contact a {
+        .contact-details span {
             color: #007bff;
-            text-decoration: none;
             font-weight: bold;
         }
-        #contact a:hover {
-            text-decoration: underline;
-        }
-        #contact img {
-            max-width: 200px; /* Limit the image size */
-            border-radius: 50%; /* Circular image */
+        .contact-image {
             margin: 20px 0;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a professional look */
+        }
+        .contact-image img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -93,24 +130,35 @@
 <body>
     <header>
         <span class="company-name">IT Puerto Rico</span>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="products.html">Products</a>
             <a href="sos.html">SOS</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <section id="contact">
         <h2>Contact Us</h2>
-        <img src="ceo.jpg" alt="Giancarlos Bebe Maldonado - CEO">
-        <p><strong>Phone:</strong> <a href="tel:+17874000644">787.400.0644</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></p>
-        <p><strong>Address:</strong> San Juan, Puerto Rico</p>
-        <p>Feel free to reach out to us with any questions or to schedule a consultation. We look forward to working with you!</p>
+        <div class="contact-details">
+            <p><span>Phone:</span> 787.400.0644</p>
+            <p><span>Email:</span> info@itpuertorico.com</p>
+            <p><span>Address:</span> San Juan, Puerto Rico</p>
+        </div>
+        <div class="contact-image">
+            <img src="ceo.jpg" alt="Giancarlos Bebe Maldonado - CEO">
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
