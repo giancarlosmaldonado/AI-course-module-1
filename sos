@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS - IT Puerto Rico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+        .logo img {
+            height: 80px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            color: #333;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        #sos {
+            padding: 50px 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .download-buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+        }
+        .download-buttons a:hover {
+            background-color: #cc0000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="IT Puerto Rico Logo">
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <section id="sos">
+        <h2>SOS Support</h2>
+        <div class="download-buttons">
+            <a href="https://download.splashtop.com/sos/SplashtopSOS.dmg?_gl=1*jhyx8v*" target="_blank">Mac Download</a>
+            <a href="https://download.splashtop.com/sos/SplashtopSOS.exe?_gl=1*4ixoex*" target="_blank">Windows Download</a>
+        </div>
+    </section>
+</body>
+</html>
