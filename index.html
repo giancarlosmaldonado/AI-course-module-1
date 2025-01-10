@@ -50,6 +50,34 @@
             color: #007bff;
         }
 
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+        }
+
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -90,10 +118,9 @@
 </head>
 <body>
     <header>
-        <!-- Company Name Only -->
         <span class="company-name">IT Puerto Rico</span>
-        <!-- Navigation Menu -->
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
             <a href="about.html">About Us</a>
             <a href="services.html">Services</a>
             <a href="products.html">Products</a>
@@ -111,5 +138,11 @@
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
