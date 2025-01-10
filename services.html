@@ -93,7 +93,7 @@
             text-align: left;
         }
         #services h2 {
-            font-size: 3em;
+            font-size: 2.5em;
             color: #003366;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -102,23 +102,26 @@
         .service-item {
             display: flex;
             gap: 20px;
-            align-items: center;
+            align-items: flex-start;
             margin-bottom: 30px;
+            flex-wrap: wrap;
         }
         .service-item img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
             border-radius: 8px;
+            flex-shrink: 0;
         }
         .service-item h3 {
-            font-size: 1.8em;
+            font-size: 1.5em;
             color: #ff3366;
+            margin: 0 0 10px;
         }
         .service-item p {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin-bottom: 10px;
+            font-size: 1em;
+            line-height: 1.6;
+            margin: 0 0 10px;
         }
         .service-item p span {
             color: #007bff;
