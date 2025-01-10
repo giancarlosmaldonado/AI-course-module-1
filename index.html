@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IT Puerto Rico | Innovating with AI</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for logo and hero section */
+        .logo img {
+            height: 50px; /* Reduced size */
+        }
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .hero-section video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .hero-section h1 {
+            font-size: 4em;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            z-index: 1;
+            position: relative; /* Ensure text is above video */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,9 +58,7 @@
             <source src="background2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-        <div>
-            <h1>Empower Your Business with AI</h1>
-        </div>
+        <h1>Empower Your Business with AI</h1>
     </div>
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
