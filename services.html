@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services - IT Puerto Rico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -32,15 +32,18 @@
             font-size: 1.5em;
             font-weight: bold;
             color: #333;
+            flex: 1;
         }
         nav {
             display: flex;
+            justify-content: center;
             gap: 15px;
+            flex: 2;
         }
         nav a {
             text-decoration: none;
             font-weight: bold;
-            padding: 10px 15px;
+            padding: 8px 15px;
             color: #333;
             border-radius: 4px;
             transition: all 0.3s;
@@ -50,30 +53,67 @@
             color: #007bff;
         }
 
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                border-top: 1px solid #ddd;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 999;
+            }
+            nav.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .company-name {
+                flex: unset;
+            }
+        }
+
         /* Services Section */
         #services {
-            padding: 50px 20px;
+            padding: 100px 20px 50px;
             max-width: 1200px;
-            margin: 80px auto 20px; /* Adjusted margin for fixed header */
+            margin: 0 auto;
+            text-align: left;
         }
-        .service {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
+        #services h2 {
+            font-size: 3em;
+            color: #003366;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            text-align: center;
         }
-        .service img {
-            max-width: 120px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 10px;
+        .service-item {
+            margin-bottom: 30px;
         }
-        .service h3 {
-            font-size: 1.5em;
+        .service-item h3 {
+            font-size: 1.8em;
+            color: #ff3366;
+        }
+        .service-item p {
+            font-size: 1.2em;
+            line-height: 1.8;
             margin-bottom: 10px;
         }
-        .service p {
-            margin: 0;
-            line-height: 1.5;
+        .service-item p span {
+            color: #007bff;
+            font-weight: bold;
         }
 
         /* Footer */
@@ -88,9 +128,11 @@
 <body>
     <header>
         <span class="company-name">IT Puerto Rico</span>
-        <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu">
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
             <a href="products.html">Products</a>
             <a href="sos.html">SOS</a>
             <a href="contact.html">Contact</a>
@@ -98,89 +140,43 @@
     </header>
     <section id="services">
         <h2>Our Services</h2>
-        <!-- Service 1 -->
-        <div class="service">
-            <img src="networkservices.jpg" alt="Network Setup & Management">
-            <div>
-                <h3>Network Setup & Management</h3>
-                <p>Designing, implementing, and managing secure and reliable network solutions for businesses. Includes VPN setup, firewall configurations, and network troubleshooting.</p>
-            </div>
+        <div class="service-item">
+            <h3>Network Setup & Management</h3>
+            <p><span>Designing, implementing,</span> and managing secure and reliable network solutions for businesses.</p>
+            <p>Includes VPN setup, firewall configurations, and network troubleshooting.</p>
         </div>
-        <!-- Service 2 -->
-        <div class="service">
-            <img src="cybersecurity.jpg" alt="Cybersecurity Solutions">
-            <div>
-                <h3>Cybersecurity Solutions</h3>
-                <p>Endpoint protection, antivirus solutions, and real-time threat monitoring. Vulnerability assessments and penetration testing. Security training for employees.</p>
-            </div>
+        <div class="service-item">
+            <h3>Cybersecurity Solutions</h3>
+            <p><span>Endpoint protection, antivirus solutions,</span> and real-time threat monitoring.</p>
+            <p>Vulnerability assessments and penetration testing. Security training for employees.</p>
         </div>
-        <!-- Service 3 -->
-        <div class="service">
-            <img src="remote.jpg" alt="Remote IT Support">
-            <div>
-                <h3>Remote IT Support</h3>
-                <p>On-demand support for troubleshooting software and hardware issues. Remote desktop access for problem resolution.</p>
-            </div>
+        <div class="service-item">
+            <h3>Remote IT Support</h3>
+            <p>On-demand support for troubleshooting software and hardware issues.</p>
+            <p>Remote desktop access for problem resolution.</p>
         </div>
-        <!-- Service 4 -->
-        <div class="service">
-            <img src="cloud.jpg" alt="Cloud Computing Services">
-            <div>
-                <h3>Cloud Computing Services</h3>
-                <p>Cloud storage setup and migration. Integration of cloud services like Microsoft Azure, AWS, or Google Workspace.</p>
-            </div>
+        <div class="service-item">
+            <h3>Cloud Computing Services</h3>
+            <p>Cloud storage setup and migration. Integration of cloud services like Microsoft Azure, AWS, or Google Workspace.</p>
         </div>
-        <!-- Service 5 -->
-        <div class="service">
-            <img src="managedit.jpg" alt="Managed IT Services">
-            <div>
-                <h3>Managed IT Services</h3>
-                <p>24/7 monitoring and maintenance of IT infrastructure. Proactive updates, backups, and patch management.</p>
-            </div>
+        <div class="service-item">
+            <h3>Managed IT Services</h3>
+            <p><span>24/7 monitoring</span> and maintenance of IT infrastructure.</p>
+            <p>Proactive updates, backups, and patch management.</p>
         </div>
-        <!-- Service 6 -->
-        <div class="service">
-            <img src="backup.jpg" alt="Data Backup & Recovery">
-            <div>
-                <h3>Data Backup & Recovery</h3>
-                <p>Secure data backup solutions for disaster recovery. Support for recovering lost data due to hardware failure or cyberattacks.</p>
-            </div>
-        </div>
-        <!-- Service 7 -->
-        <div class="service">
-            <img src="software.jpg" alt="Custom Software Development">
-            <div>
-                <h3>Custom Software Development</h3>
-                <p>Tailored software solutions to meet specific business needs. Application design, development, and testing services.</p>
-            </div>
-        </div>
-        <!-- Service 8 -->
-        <div class="service">
-            <img src="consulting.jpg" alt="IT Consulting">
-            <div>
-                <h3>IT Consulting</h3>
-                <p>Advising businesses on improving IT infrastructure. Offering cost-effective solutions for scaling and enhancing systems.</p>
-            </div>
-        </div>
-        <!-- Service 9 -->
-        <div class="service">
-            <img src="hardware.jpg" alt="Hardware & Software Procurement">
-            <div>
-                <h3>Hardware & Software Procurement</h3>
-                <p>Sourcing and installing computers, servers, printers, and networking devices. Software licensing for productivity and security tools.</p>
-            </div>
-        </div>
-        <!-- Service 10 -->
-        <div class="service">
-            <img src="training.jpg" alt="IT Training">
-            <div>
-                <h3>IT Training</h3>
-                <p>Training programs for businesses to upskill employees in technology tools and security awareness.</p>
-            </div>
+        <div class="service-item">
+            <h3>Custom Software Development</h3>
+            <p>Tailored software solutions to meet specific business needs. Application design, development, and testing services.</p>
         </div>
     </section>
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
     </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
