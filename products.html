@@ -6,6 +6,7 @@
     <title>Products - IT Puerto Rico</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -13,17 +14,24 @@
             background-color: #f8f9fa;
             color: #333;
         }
+
+        /* Header */
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
         }
-        .logo img {
-            height: 80px;
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
         }
         nav {
             display: flex;
@@ -34,29 +42,52 @@
             font-weight: bold;
             padding: 10px 15px;
             color: #333;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
         nav a:hover {
+            background-color: #f1f1f1;
             color: #007bff;
         }
+
+        /* Products Section */
         #products {
             padding: 50px 20px;
             max-width: 1200px;
-            margin: auto;
+            margin: 80px auto 20px; /* Adjusted margin for fixed header */
         }
-        #products h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
         }
-        .product-card {
-            margin-bottom: 20px;
+        .product img {
+            max-width: 120px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .product p {
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="IT Puerto Rico Logo">
-        </div>
+        <span class="company-name">IT Puerto Rico</span>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -67,15 +98,65 @@
     </header>
     <section id="products">
         <h2>Our Products</h2>
-        <div class="product-card">
-            <h3>Antivirus Solutions</h3>
-            <p>TrendMicro, Webroot, and other antivirus tools.</p>
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="antivirus.jpg" alt="Antivirus Solutions">
+            <div>
+                <h3>Antivirus Solutions</h3>
+                <p>Reselling licenses for TrendMicro, Webroot, or other antivirus tools.</p>
+            </div>
         </div>
-        <div class="product-card">
-            <h3>Custom-Built Computers</h3>
-            <p>High-performance PCs tailored for business or creative use.</p>
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="networking.jpg" alt="Networking Equipment">
+            <div>
+                <h3>Networking Equipment</h3>
+                <p>Routers, modems, switches, and firewalls from trusted brands like Cisco and Ubiquiti.</p>
+            </div>
         </div>
-        <!-- Add more products as needed -->
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="hardware.jpg" alt="Hardware Devices">
+            <div>
+                <h3>Hardware Devices</h3>
+                <p>Laptops, desktops, monitors, and servers from Dell, Apple, or other top manufacturers.</p>
+            </div>
+        </div>
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="cloud.jpg" alt="Cloud Solutions">
+            <div>
+                <h3>Cloud Solutions</h3>
+                <p>Subscription packages for Microsoft 365, Google Workspace, or similar platforms.</p>
+            </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product">
+            <img src="backup.jpg" alt="Backup and Storage Devices">
+            <div>
+                <h3>Backup and Storage Devices</h3>
+                <p>External hard drives, NAS devices, and cloud storage plans.</p>
+            </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product">
+            <img src="voip.jpg" alt="VoIP Solutions">
+            <div>
+                <h3>VoIP Solutions</h3>
+                <p>VoIP phones, headsets, and software for unified communication systems.</p>
+            </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="product">
+            <img src="custombuilt.jpg" alt="Custom-Built Computers">
+            <div>
+                <h3>Custom-Built Computers</h3>
+                <p>High-performance PCs tailored for business, gaming, or creative use.</p>
+            </div>
+        </div>
     </section>
+    <footer>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+    </footer>
 </body>
 </html>
