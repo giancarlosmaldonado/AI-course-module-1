@@ -6,6 +6,7 @@
     <title>Contact - IT Puerto Rico</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -13,17 +14,24 @@
             background-color: #f8f9fa;
             color: #333;
         }
+
+        /* Header */
         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
         }
-        .logo img {
-            height: 80px;
+        .company-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
         }
         nav {
             display: flex;
@@ -34,27 +42,51 @@
             font-weight: bold;
             padding: 10px 15px;
             color: #333;
+            border-radius: 4px;
+            transition: all 0.3s;
         }
         nav a:hover {
+            background-color: #f1f1f1;
             color: #007bff;
         }
+
+        /* Contact Section */
         #contact {
             padding: 50px 20px;
             max-width: 800px;
-            margin: auto;
-            text-align: center;
+            margin: 80px auto 20px; /* Adjusted margin for fixed header */
+            text-align: center; /* Center-align all contact text */
+        }
+        #contact h2 {
+            margin-bottom: 20px;
+            font-size: 2em;
         }
         #contact p {
             font-size: 1.2em;
-            margin-bottom: 15px;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        #contact a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.jpg" alt="IT Puerto Rico Logo">
-        </div>
+        <span class="company-name">IT Puerto Rico</span>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
@@ -65,8 +97,13 @@
     </header>
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></p>
-        <p>Phone: 787.400.0644</p>
+        <p><strong>Phone:</strong> <a href="tel:+17874000644">787.400.0644</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a></p>
+        <p><strong>Address:</strong> 123 IT Innovation Avenue, San Juan, Puerto Rico</p>
+        <p>Feel free to reach out to us with any questions or to schedule a consultation. We look forward to working with you!</p>
     </section>
+    <footer>
+        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+    </footer>
 </body>
 </html>
