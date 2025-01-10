@@ -28,17 +28,8 @@
             width: 100%;
             z-index: 1000;
         }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo img {
-            height: 40px; /* Restrict the height to fix the giant logo issue */
-            max-width: 100%; /* Ensure the logo doesn’t exceed the container width */
-        }
         .company-name {
-            font-size: 1.2em;
+            font-size: 1.5em;
             font-weight: bold;
             color: #333;
         }
@@ -99,11 +90,8 @@
 </head>
 <body>
     <header>
-        <!-- Logo and Company Name -->
-        <div class="logo-container">
-            <img src="logo.jpg" alt="IT Puerto Rico Logo">
-            <span class="company-name">IT Puerto Rico</span>
-        </div>
+        <!-- Company Name Only -->
+        <span class="company-name">IT Puerto Rico</span>
         <!-- Navigation Menu -->
         <nav>
             <a href="about.html">About Us</a>
