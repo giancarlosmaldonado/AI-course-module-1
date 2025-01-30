@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services - IT Puerto Rico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <title>Our Services - IT Puerto Rico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f9fa;
@@ -102,7 +102,7 @@
         .service-item {
             display: flex;
             gap: 20px;
-            align-items: flex-start;
+            align-items: center;
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
@@ -134,6 +134,18 @@
             color: white;
             padding: 20px;
             text-align: center;
+        }
+        .footer-links {
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -185,6 +197,10 @@
     </section>
     <footer>
         <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
     </footer>
     <script>
         function toggleMenu() {
