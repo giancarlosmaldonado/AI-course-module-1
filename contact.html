@@ -91,6 +91,12 @@
             max-width: 1200px;
             margin: 0 auto;
             text-align: center;
+
+            /* Center vertically */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 70vh;
         }
         #contact h2 {
             font-size: 2.5em;
@@ -107,15 +113,6 @@
         .contact-details span {
             color: #007bff;
             font-weight: bold;
-        }
-        .contact-image {
-            margin: 20px 0;
-        }
-        .contact-image img {
-            max-width: 200px;
-            height: auto;
-            border-radius: 50%;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -146,9 +143,6 @@
             <p><span>Phone:</span> 787.965.4034</p>
             <p><span>Email:</span> info@itpuertorico.com</p>
             <p><span>Address:</span> San Juan, Puerto Rico</p>
-        </div>
-        <div class="contact-image">
-            <img src="ceo.jpg" alt="Giancarlos Bebe Maldonado - CEO">
         </div>
     </section>
     <footer>
