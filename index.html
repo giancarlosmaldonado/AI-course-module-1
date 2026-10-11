@@ -1,171 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Puerto Rico | Innovating with AI</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .company-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            flex: 1; /* Push navigation to the center */
-        }
-        nav {
-            display: flex;
-            justify-content: center; /* Center the navigation */
-            gap: 15px;
-            flex: 2; /* Take up space for centering */
-        }
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 15px; /* Adjust padding */
-            color: #333;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        nav a:hover {
-            background-color: #f1f1f1;
-            color: #007bff;
-        }
-
-        /* Mobile Menu */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5em;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                border-top: 1px solid #ddd;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                z-index: 999;
-            }
-            nav.show {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .company-name {
-                flex: unset; /* Prevent left alignment issue */
-            }
-        }
-
-        /* Hero Section */
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        .hero-section video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        .hero-section h1 {
-            font-size: 3em;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-            margin: 0;
-            z-index: 1;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .footer-links {
-            font-size: 0.9em;
-            margin-top: 10px;
-        }
-        .footer-links a {
-            color: #ccc;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .footer-links a:hover {
-            color: #fff;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <span class="company-name">IT Puerto Rico</span>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav id="menu">
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="products.html">Products</a>
-            <a href="sos.html">SOS</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <div class="hero-section">
-        <video autoplay muted loop playsinline>
-            <source src="background2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h1>Empower Your Business with AI</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      IT services for a business that’s going places | IT Puerto Rico
+    </title>
+    <meta
+      name="description"
+      content="IT services, cybersecurity, cloud solutions, and custom software for businesses in Puerto Rico. Connect with IT Puerto Rico."
+    />
+    <meta name="theme-color" content="#071e2c" />
+    <link rel="canonical" href="https://www.itpuertorico.com/" />
+    <meta
+      property="og:title"
+      content="IT services for a business that’s going places | IT Puerto Rico"
+    />
+    <meta
+      property="og:description"
+      content="IT services, cybersecurity, cloud solutions, and custom software for businesses in Puerto Rico. Connect with IT Puerto Rico."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.itpuertorico.com/assets/office.webp"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="topbar">
+      <div class="wrap">
+        <span>LOCAL EXPERTISE. ISLAND-WIDE IMPACT.</span
+        ><a href="tel:+17874000644"
+          >787.400.0644 <span aria-hidden="true">↗</span></a
+        >
+      </div>
     </div>
-    <footer>
-        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms & Conditions</a>
+    <header class="site-header">
+      <div class="wrap nav-wrap">
+        <a class="brand" href="index.html" aria-label="IT Puerto Rico home"
+          ><span class="brand-mark" aria-hidden="true">IT<span>↗</span></span
+          ><span>IT Puerto Rico<small>TECHNOLOGY. CONNECTED.</small></span></a
+        ><button
+          class="menu-toggle"
+          aria-controls="navigation"
+          aria-expanded="false"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="services.html">Services</a
+          ><a href="products.html">Products</a><a href="about.html">About us</a
+          ><a href="sos.html">SOS support</a
+          ><a href="contact.html" class="nav-cta">Let’s talk ↗</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <img
+          class="hero-image"
+          src="assets/office.webp"
+          alt=""
+          width="1600"
+          height="900"
+          fetchpriority="high"
+        />
+        <div class="wrap hero-content">
+          <p class="eyebrow">
+            <span class="status-dot"></span> YOUR TECHNOLOGY PARTNER IN PUERTO
+            RICO
+          </p>
+          <h1>Built for your business.<br /><em>Ready for what’s next.</em></h1>
+          <p class="lead">
+            Secure networks. Smarter systems. Real support.<br />
+            Technology that keeps your business moving forward.
+          </p>
+          <div class="actions">
+            <a class="button" href="contact.html"
+              >Let’s talk about your IT <span aria-hidden="true">↗</span></a
+            ><a class="button button-outline" href="#solutions"
+              >Explore our services <span aria-hidden="true">↓</span></a
+            >
+          </div>
+          <div class="hero-note">
+            <span>BASED IN PUERTO RICO</span
+            ><span>Focused on your business. Connected to your goals.</span>
+          </div>
         </div>
+      </section>
+      <section class="proof-strip" aria-label="Our expertise">
+        <div class="wrap proof-grid">
+          <div><strong>15+</strong><span>Years of IT experience</span></div>
+          <div><strong>Local.</strong><span>Rooted in Puerto Rico</span></div>
+          <div>
+            <strong>Personal.</strong><span>Solutions built around you</span>
+          </div>
+          <a href="sos.html"
+            ><span>Already a client?<br /><b>Get remote support ↗</b></span></a
+          >
+        </div>
+      </section>
+      <section class="section" id="solutions">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">CONNECTED SOLUTIONS</p>
+              <h2>One partner.<br />A world of possibilities.</h2>
+            </div>
+            <p>
+              From the network your team relies on to the systems that help you
+              grow, we bring your technology together.
+            </p>
+          </div>
+          <div class="service-grid">
+            <a class="service-card" href="services.html#network"
+              ><div class="card-top">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="8" y="2" width="8" height="6" rx="1" />
+                  <path d="M12 8v6M4 14h16M4 14v3M20 14v3" />
+                  <rect x="1" y="17" width="6" height="5" rx="1" />
+                  <rect x="17" y="17" width="6" height="5" rx="1" /></svg
+                ><span>01</span>
+              </div>
+              <h3>Network &amp; infrastructure</h3>
+              <p>A stronger connection. A smoother workday.</p>
+              <span class="text-link"
+                >Explore service <span aria-hidden="true">↗</span></span
+              ></a
+            ><a class="service-card" href="services.html#security"
+              ><div class="card-top">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6z" />
+                  <path d="m8 12 3 3 5-6" /></svg
+                ><span>02</span>
+              </div>
+              <h3>Cybersecurity</h3>
+              <p>Protect what you’ve worked to build.</p>
+              <span class="text-link"
+                >Explore service <span aria-hidden="true">↗</span></span
+              ></a
+            ><a class="service-card" href="services.html#cloud"
+              ><div class="card-top">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6 19h12a5 5 0 0 0 0-10A7 7 0 0 0 4 9a5 5 0 0 0 2 10Z"
+                  /></svg
+                ><span>03</span>
+              </div>
+              <h3>Cloud solutions</h3>
+              <p>Give your team room to grow.</p>
+              <span class="text-link"
+                >Explore service <span aria-hidden="true">↗</span></span
+              ></a
+            ><a class="service-card" href="services.html#software"
+              ><div class="card-top">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 3l-4 18" /></svg
+                ><span>04</span>
+              </div>
+              <h3>Custom software</h3>
+              <p>Make technology work your way.</p>
+              <span class="text-link"
+                >Explore service <span aria-hidden="true">↗</span></span
+              ></a
+            >
+          </div>
+          <div class="section-tail">
+            <span>Need help finding the right starting point?</span
+            ><a class="text-link" href="contact.html">Talk with our team ↗</a>
+          </div>
+        </div>
+      </section>
+      <section class="local-section">
+        <div class="wrap local-grid">
+          <div class="local-art">
+            <img
+              src="logo.jpg"
+              alt="Puerto Rico flag represented as a technology circuit"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            /><span>OUR ISLAND. YOUR AMBITION.</span>
+          </div>
+          <div>
+            <p class="eyebrow">TECHNOLOGY WITH A LOCAL PERSPECTIVE</p>
+            <h2>Big possibilities.<br />Close to home.</h2>
+            <p class="lead">
+              We understand the place you do business. And the people who make
+              it work.
+            </p>
+            <p>
+              With more than 15 years of experience and deep roots in Puerto
+              Rico’s technology community, we help local businesses connect,
+              protect, and improve the way they work.
+            </p>
+            <div class="value-row">
+              <b>01</b>
+              <div>
+                <h3>Built around your needs</h3>
+                <p>
+                  Practical solutions for your team, your workflows, and your
+                  goals.
+                </p>
+              </div>
+            </div>
+            <div class="value-row">
+              <b>02</b>
+              <div>
+                <h3>Support beyond the setup</h3>
+                <p>
+                  IT consulting, proactive maintenance, and on-demand remote
+                  help.
+                </p>
+              </div>
+            </div>
+            <a class="text-link" href="about.html"
+              >Meet your technology partner ↗</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">THE RIGHT TOOLS FOR THE JOB</p>
+              <h2>Equip your next move.</h2>
+            </div>
+            <a class="text-link" href="products.html">Explore products ↗</a>
+          </div>
+          <div class="product-feature">
+            <div>
+              <span class="eyebrow">HARDWARE · SOFTWARE · CLOUD</span>
+              <h3>Everything your team<br />needs to get to work.</h3>
+              <p>
+                From business computers and networking equipment to productivity
+                software and backup storage, find the technology that fits.
+              </p>
+              <a class="button button-dark" href="products.html"
+                >Find your solution ↗</a
+              >
+            </div>
+            <img
+              src="hardwaredevices.jpg"
+              alt="Illustration of computers and business hardware"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="cta">
+        <div class="wrap cta-inner">
+          <div>
+            <p class="eyebrow">LET’S MOVE YOUR BUSINESS FORWARD</p>
+            <h2>Your next chapter.<br />Powered by better IT.</h2>
+          </div>
+          <a class="button button-dark" href="contact.html"
+            >Let’s start a conversation <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">IT<span>↗</span></span
+            ><span>IT Puerto Rico<small>TECHNOLOGY. CONNECTED.</small></span></a
+          >
+          <p>
+            Local knowledge. Forward-thinking technology.<br />Built around your
+            business.
+          </p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="services.html">Services</a
+          ><a href="products.html">Products</a><a href="about.html">About us</a>
+        </div>
+        <div>
+          <h2>Get in touch</h2>
+          <a href="tel:+17874000644">787.400.0644</a
+          ><a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a
+          ><span>San Juan, Puerto Rico</span>
+        </div>
+        <div>
+          <h2>Need a hand?</h2>
+          <p>Connect with our remote<br />support team.</p>
+          <a class="footer-support" href="sos.html">Go to SOS support ↗</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span
+          >© <span data-year>2026</span> IT Puerto Rico. All rights
+          reserved.</span
+        >
+        <div>
+          <a href="privacy.html">Privacy policy</a
+          ><a href="terms.html">Terms &amp; conditions</a>
+        </div>
+      </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
-</body>
+  </body>
 </html>

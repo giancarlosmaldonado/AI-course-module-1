@@ -1,208 +1,240 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - IT Puerto Rico</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
-        .company-name {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            flex: 1;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex: 2;
-        }
-        nav a {
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 15px;
-            color: #333;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-        nav a:hover {
-            background-color: #f1f1f1;
-            color: #007bff;
-        }
-
-        /* Mobile Menu */
-        .menu-toggle {
-            display: none;
-            font-size: 1.5em;
-            background: none;
-            border: none;
-            cursor: pointer;
-        }
-        @media (max-width: 768px) {
-            nav {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                border-top: 1px solid #ddd;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                z-index: 999;
-            }
-            nav.show {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            .company-name {
-                flex: unset;
-            }
-        }
-
-        /* Products Section */
-        #products {
-            padding: 100px 20px 50px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        #products h2 {
-            font-size: 2.5em;
-            color: #003366;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            text-align: center;
-        }
-        .product-item {
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        .product-item img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 8px;
-            flex-shrink: 0;
-        }
-        .product-item h3 {
-            font-size: 1.5em;
-            color: #ff3366;
-            margin: 0 0 10px;
-        }
-        .product-item p {
-            font-size: 1em;
-            line-height: 1.6;
-            margin: 0 0 10px;
-        }
-        .product-item p span {
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <span class="company-name">IT Puerto Rico</span>
-        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-        <nav id="menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="products.html">Products</a>
-            <a href="sos.html">SOS</a>
-            <a href="contact.html">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products | IT Puerto Rico</title>
+    <meta
+      name="description"
+      content="Explore business hardware, networking equipment, antivirus licenses, cloud subscriptions, and storage from IT Puerto Rico."
+    />
+    <meta name="theme-color" content="#071e2c" />
+    <link rel="canonical" href="https://www.itpuertorico.com/products.html" />
+    <meta property="og:title" content="Products | IT Puerto Rico" />
+    <meta
+      property="og:description"
+      content="Explore business hardware, networking equipment, antivirus licenses, cloud subscriptions, and storage from IT Puerto Rico."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://www.itpuertorico.com/assets/office.webp"
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="assets/site.css" />
+    <script src="assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="topbar">
+      <div class="wrap">
+        <span>LOCAL EXPERTISE. ISLAND-WIDE IMPACT.</span
+        ><a href="tel:+17874000644"
+          >787.400.0644 <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </div>
+    <header class="site-header">
+      <div class="wrap nav-wrap">
+        <a class="brand" href="index.html" aria-label="IT Puerto Rico home"
+          ><span class="brand-mark" aria-hidden="true">IT<span>↗</span></span
+          ><span>IT Puerto Rico<small>TECHNOLOGY. CONNECTED.</small></span></a
+        ><button
+          class="menu-toggle"
+          aria-controls="navigation"
+          aria-expanded="false"
+          hidden
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav id="navigation" aria-label="Main navigation">
+          <a href="services.html">Services</a
+          ><a href="products.html" aria-current="page">Products</a
+          ><a href="about.html">About us</a><a href="sos.html">SOS support</a
+          ><a href="contact.html" class="nav-cta">Let’s talk ↗</a>
         </nav>
+      </div>
     </header>
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-item">
-            <img src="antivirus.jpg" alt="Antivirus Solutions">
-            <div>
-                <h3>Antivirus Solutions</h3>
-                <p>Reselling licenses for <span>TrendMicro, Webroot</span>, or other antivirus tools.</p>
-            </div>
+    <main id="main">
+      <section class="page-hero">
+        <div class="wrap">
+          <p class="eyebrow">EQUIP YOUR BUSINESS</p>
+          <h1>The right technology.<br />For the way you work.</h1>
+          <p class="lead">
+            Get guidance on hardware, software, and cloud products that match
+            your needs. Contact us for availability and pricing.
+          </p>
         </div>
-        <div class="product-item">
-            <img src="networkingequipment.jpg" alt="Networking Equipment">
+      </section>
+      <section class="section">
+        <div class="wrap products-grid">
+          <article class="product-card">
+            <img
+              src="antivirus.jpg"
+              alt="Illustration of antivirus solutions"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
             <div>
-                <h3>Networking Equipment</h3>
-                <p>Routers, modems, switches, and firewalls from trusted brands like <span>Cisco</span> and <span>Ubiquiti</span>.</p>
+              <h2>Antivirus solutions</h2>
+              <p>
+                Endpoint protection licenses from TrendMicro, Webroot, and other
+                antivirus providers.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
             </div>
-        </div>
-        <div class="product-item">
-            <img src="hardwaredevices.jpg" alt="Hardware Devices">
+          </article>
+          <article class="product-card">
+            <img
+              src="networkingequipment.jpg"
+              alt="Illustration of networking equipment"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
             <div>
-                <h3>Hardware Devices</h3>
-                <p>Laptops, desktops, monitors, and servers from <span>Dell</span>, <span>Apple</span>, and other top manufacturers.</p>
+              <h2>Networking equipment</h2>
+              <p>
+                Routers, modems, switches, and firewalls from brands including
+                Cisco and Ubiquiti.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
             </div>
-        </div>
-        <div class="product-item">
-            <img src="cloudsolutions.jpg" alt="Cloud Solutions">
+          </article>
+          <article class="product-card">
+            <img
+              src="hardwaredevices.jpg"
+              alt="Illustration of business hardware"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
             <div>
-                <h3>Cloud Solutions</h3>
-                <p>Subscription packages for <span>Microsoft 365</span>, <span>Google Workspace</span>, or similar platforms.</p>
+              <h2>Business hardware</h2>
+              <p>
+                Laptops, desktops, monitors, and servers from Dell, Apple, and
+                other manufacturers.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
             </div>
-        </div>
-        <div class="product-item">
-            <img src="backupstorage.jpg" alt="Backup and Storage Devices">
+          </article>
+          <article class="product-card">
+            <img
+              src="cloudsolutions.jpg"
+              alt="Illustration of cloud productivity"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
             <div>
-                <h3>Backup and Storage Devices</h3>
-                <p>External hard drives, <span>NAS devices</span>, and cloud storage plans.</p>
+              <h2>Cloud productivity</h2>
+              <p>
+                Microsoft 365, Google Workspace, and cloud subscription packages
+                for your team.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
             </div>
-        </div>
-        <div class="product-item">
-            <img src="custombuilt.jpg" alt="Custom-Built Computers">
+          </article>
+          <article class="product-card">
+            <img
+              src="backupstorage.jpg"
+              alt="Illustration of backup &amp; storage"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
             <div>
-                <h3>Custom-Built Computers</h3>
-                <p>High-performance PCs tailored for business, gaming, or creative use.</p>
+              <h2>Backup &amp; storage</h2>
+              <p>
+                External drives, NAS devices, and cloud storage options for your
+                business data.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
             </div>
+          </article>
+          <article class="product-card">
+            <img
+              src="custombuilt.jpg"
+              alt="Illustration of custom-built computers"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            />
+            <div>
+              <h2>Custom-built computers</h2>
+              <p>
+                High-performance PCs configured for business, creative work, or
+                gaming.
+              </p>
+              <a class="text-link" href="contact.html"
+                >Ask about this solution ↗</a
+              >
+            </div>
+          </article>
         </div>
-    </section>
-    <footer>
-        <p>&copy; 2025 IT Puerto Rico. All rights reserved.</p>
+      </section>
+      <section class="cta">
+        <div class="wrap cta-inner">
+          <div>
+            <p class="eyebrow">LET’S MOVE YOUR BUSINESS FORWARD</p>
+            <h2>Your next chapter.<br />Powered by better IT.</h2>
+          </div>
+          <a class="button button-dark" href="contact.html"
+            >Let’s start a conversation <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a class="brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">IT<span>↗</span></span
+            ><span>IT Puerto Rico<small>TECHNOLOGY. CONNECTED.</small></span></a
+          >
+          <p>
+            Local knowledge. Forward-thinking technology.<br />Built around your
+            business.
+          </p>
+        </div>
+        <div>
+          <h2>Explore</h2>
+          <a href="services.html">Services</a
+          ><a href="products.html">Products</a><a href="about.html">About us</a>
+        </div>
+        <div>
+          <h2>Get in touch</h2>
+          <a href="tel:+17874000644">787.400.0644</a
+          ><a href="mailto:info@itpuertorico.com">info@itpuertorico.com</a
+          ><span>San Juan, Puerto Rico</span>
+        </div>
+        <div>
+          <h2>Need a hand?</h2>
+          <p>Connect with our remote<br />support team.</p>
+          <a class="footer-support" href="sos.html">Go to SOS support ↗</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span
+          >© <span data-year>2026</span> IT Puerto Rico. All rights
+          reserved.</span
+        >
+        <div>
+          <a href="privacy.html">Privacy policy</a
+          ><a href="terms.html">Terms &amp; conditions</a>
+        </div>
+      </div>
     </footer>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
-</body>
+  </body>
 </html>
